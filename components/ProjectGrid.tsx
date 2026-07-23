@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import ProjectCard from './ProjectCard';
 
 const SAMPLE_PROJECTS = [
@@ -10,7 +11,7 @@ const SAMPLE_PROJECTS = [
     category: 'Data Analysis',
     description: 'Built with Palantir Foundry - Comprehensive music consumption analytics and listener insights platform',
     image: '🎵',
-    link: '#',
+    link: '/projects/spotify-analysis',
   },
   {
     id: 2,
@@ -18,7 +19,7 @@ const SAMPLE_PROJECTS = [
     category: 'Space Tech',
     description: 'Near-Earth Object Early Warning System - Real-time tracking and trajectory analysis powered by Palantir Foundry',
     image: '🪨',
-    link: '#',
+    link: '/projects/asteroid-watch',
   },
   {
     id: 3,
@@ -26,7 +27,7 @@ const SAMPLE_PROJECTS = [
     category: 'Web App',
     description: 'Streamlined application for managing project requests with data integration via Palantir Foundry',
     image: '📋',
-    link: '#',
+    link: '/projects/project-request-app',
   },
 ];
 
@@ -65,7 +66,9 @@ export default function ProjectGrid() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
-            <ProjectCard key={project.id} {...project} />
+            <Link key={project.id} href={project.link}>
+              <ProjectCard {...project} />
+            </Link>
           ))}
         </div>
       </div>
