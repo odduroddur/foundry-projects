@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer id="contact" className="bg-secondary text-white py-12">
@@ -15,9 +17,9 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="text-gray-300 space-y-2">
               <li>
-                <a href="#projects" className="hover:text-primary transition">
+                <Link href="/#projects" className="hover:text-primary transition">
                   Projects
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="https://github.com/odduroddur" className="hover:text-primary transition">
