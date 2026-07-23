@@ -1,44 +1,20 @@
 'use client';
 
 import { useState } from 'react';
+
+import { projectSummaries } from '@/data/projects';
+
 import ProjectCard from './ProjectCard';
 
-const SAMPLE_PROJECTS = [
-  {
-    id: 1,
-    title: 'Spotify Analysis',
-    category: 'Data Analysis',
-    description: 'Built with Palantir Foundry - Comprehensive music consumption analytics and listener insights platform',
-    image: '🎵',
-    link: '#',
-  },
-  {
-    id: 2,
-    title: 'Asteroid Watch',
-    category: 'Space Tech',
-    description: 'Near-Earth Object Early Warning System - Real-time tracking and trajectory analysis powered by Palantir Foundry',
-    image: '🪨',
-    link: '#',
-  },
-  {
-    id: 3,
-    title: 'Project Request App',
-    category: 'Web App',
-    description: 'Streamlined application for managing project requests with data integration via Palantir Foundry',
-    image: '📋',
-    link: '#',
-  },
-];
-
-const CATEGORIES = ['All', ...new Set(SAMPLE_PROJECTS.map((p) => p.category))];
+const CATEGORIES = ['All', ...new Set(projectSummaries.map((project) => project.category))];
 
 export default function ProjectGrid() {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredProjects =
     selectedCategory === 'All'
-      ? SAMPLE_PROJECTS
-      : SAMPLE_PROJECTS.filter((p) => p.category === selectedCategory);
+      ? projectSummaries
+      : projectSummaries.filter((project) => project.category === selectedCategory);
 
   return (
     <section id="projects" className="py-16 bg-gray-50">
@@ -65,7 +41,7 @@ export default function ProjectGrid() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
-            <ProjectCard key={project.id} {...project} />
+            <ProjectCard key={project.slug} {...project} />
           ))}
         </div>
       </div>

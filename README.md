@@ -37,16 +37,23 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### Adding Your Projects
 
-Edit `components/ProjectGrid.tsx` and update the `SAMPLE_PROJECTS` array:
+Edit `/data/projects.ts` and add a new project entry. The homepage cards and `/projects/[slug]` pages are generated from that single data source:
 
 ```tsx
-const SAMPLE_PROJECTS = [
+export const projects = [
   {
-    id: 1,
+    slug: 'your-project-slug',
     title: 'Your Project Title',
     category: 'Category',
     description: 'Your project description',
-    image: 'your-image.jpg',
+    cardImage: '🛠️',
+    hero: {
+      title: 'Project title',
+      description: 'Hero copy',
+      media: [],
+    },
+    techStack: ['Foundry', 'React'],
+    sections: [],
   },
   // ... more projects
 ];
@@ -54,7 +61,7 @@ const SAMPLE_PROJECTS = [
 
 ### Adding Images
 
-Create a `public/images/` folder and add your project images there, then reference them in the projects array.
+Create a `public/images/` folder and add your project images there, then set the `src` field on any project `media` or section image placeholder in `data/projects.ts`.
 
 ## Deployment
 
@@ -80,13 +87,20 @@ foundry-projects/
 ├── app/
 │   ├── layout.tsx          # Root layout
 │   ├── page.tsx            # Home page
+│   ├── asteroid-watch/     # Legacy redirect to the dynamic project route
+│   ├── projects/[slug]/    # Reusable project detail pages
 │   └── globals.css         # Global styles
 ├── components/
 │   ├── Header.tsx
 │   ├── Hero.tsx
 │   ├── ProjectGrid.tsx
 │   ├── ProjectCard.tsx
-│   └── Footer.tsx
+│   ├── Footer.tsx
+│   └── projects/           # Reusable project page sections
+├── data/
+│   └── projects.ts         # Centralized project content
+├── types/
+│   └── project.ts          # Shared TypeScript project types
 ├── package.json
 ├── tsconfig.json
 ├── tailwind.config.js
