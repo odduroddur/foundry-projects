@@ -56,7 +56,7 @@ export default function AsteroidProject() {
             <p className="text-gray-300 leading-relaxed">
               NASA tracks over 61,000 near-Earth asteroids, with new close approaches predicted daily. The raw data 
               is scattered across multiple NASA APIs, returned as deeply nested JSON, and lacks any alerting mechanism. 
-              If something noteworthy is heading our way, you'd have to check manually.
+              If something noteworthy is heading our way, you&apos;d have to check manually.
             </p>
           </div>
 
@@ -103,7 +103,7 @@ export default function AsteroidProject() {
             <div className="space-y-8">
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">7-Day Outlook (top)</h4>
-                <p className="text-gray-300 mb-4">AI-generated summary of the week's incoming asteroids with color-coded keywords</p>
+                <p className="text-gray-300 mb-4">AI-generated summary of the week&apos;s incoming asteroids with color-coded keywords</p>
                 <div className="bg-slate-800 rounded-lg p-6">
                   <p className="text-gray-400 mb-4">[Screenshot: 7-Day Outlook banner]</p>
                   <div className="bg-slate-700 h-24 rounded flex items-center justify-center">
@@ -147,7 +147,7 @@ export default function AsteroidProject() {
 
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Close Approach History</h4>
-                <p className="text-gray-300 mb-4">On-demand chart showing every Earth pass from 1900–2200, fetched live from NASA's JPL API. No data stored — always fresh.</p>
+                <p className="text-gray-300 mb-4">On-demand chart showing every Earth pass from 1900–2200, fetched live from NASA&apos;s JPL API. No data stored — always fresh.</p>
                 <div className="bg-slate-800 rounded-lg p-6">
                   <p className="text-gray-400 mb-4">[Screenshot: Close approach history chart]</p>
                   <div className="bg-slate-700 h-40 rounded flex items-center justify-center">
@@ -274,15 +274,15 @@ export default function AsteroidProject() {
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-2">1. On-demand history vs. stored history</h4>
                 <p className="text-gray-300">
-                  Rather than storing every asteroid's full close approach history (which would grow endlessly), 
-                  the app fetches it live from NASA's CAD API when you click an asteroid. Zero storage cost, always current data.
+                  Rather than storing every asteroid&apos;s full close approach history (which would grow endlessly), 
+                  the app fetches it live from NASA&apos;s CAD API when you click an asteroid. Zero storage cost, always current data.
                 </p>
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-2">2. Incremental deduplication with expiry</h4>
                 <p className="text-gray-300">
                   The main dataset rebuilds daily (SNAPSHOT), but the alerts dataset is incremental (append-only). 
-                  Alerts are deduplicated within an 8-day window — the same asteroid won't trigger repeated notifications 
+                  Alerts are deduplicated within an 8-day window — the same asteroid won&apos;t trigger repeated notifications 
                   during a single approach, but can re-trigger if it returns months later.
                 </p>
               </div>
