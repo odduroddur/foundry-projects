@@ -1,6 +1,6 @@
 'use client';
 
-import ImagePlaceholder from '../ImagePlaceholder';
+import ImagePlaceholder from '../../ImagePlaceholder';
 import { DashboardFeature } from '@/lib/projects';
 
 interface DashboardFeaturesSectionProps {

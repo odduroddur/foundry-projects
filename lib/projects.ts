@@ -72,8 +72,7 @@ export const projects: ProjectContent[] = [
     ],
     sections: {
       whatWhy: {
-        problem:
-          'NASA tracks over 61,000 near-Earth asteroids, with new close approaches predicted daily. The raw data is scattered across multiple NASA APIs, returned as deeply nested JSON, and lacks any alerting mechanism. If something noteworthy is heading our way, you need to check manually.',
+        problem: 'NASA tracks over 61,000 near-Earth asteroids, with new close approaches predicted daily. The raw data is scattered across multiple NASA APIs, returned as deeply nested JSON, and lacks any alerting mechanism. If something noteworthy is heading our way, you need to check manually.',
         solution: [
           'Pulls asteroid data daily from 3 NASA APIs and enriches it into a clean, queryable dataset',
           'Detects threats automatically using configurable distance thresholds with deduplicated alerting',
@@ -95,8 +94,7 @@ export const projects: ProjectContent[] = [
           },
           {
             title: 'Threat Assessment Scatter Plot',
-            description:
-              'Every asteroid plotted by size vs. distance. Bigger + closer = scarier. Red dots = close approach alerts. Yellow borders = potentially hazardous.',
+            description: 'Every asteroid plotted by size vs. distance. Bigger + closer = scarier. Red dots = close approach alerts. Yellow borders = potentially hazardous.',
             imagePlaceholder: '[Screenshot: Scatter plot with mixed dots, one red, several with yellow borders]',
           },
           {
@@ -111,8 +109,7 @@ export const projects: ProjectContent[] = [
           },
           {
             title: 'Close Approach History',
-            description:
-              'On-demand chart showing every Earth pass from 1900-2200, fetched live from NASA JPL API. No data stored — always fresh.',
+            description: 'On-demand chart showing every Earth pass from 1900-2200, fetched live from NASA JPL API. No data stored — always fresh.',
             imagePlaceholder: '[Screenshot: Bar chart with blue/cyan bars and red threshold line]',
           },
           {
@@ -124,77 +121,30 @@ export const projects: ProjectContent[] = [
       },
       underTheHood: {
         techStack: [
-          {
-            layer: 'Data Ingestion',
-            technology: 'Python (Polars), Lightweight Transforms',
-            purpose: 'Pull & flatten NASA API data',
-          },
-          {
-            layer: 'External APIs',
-            technology: 'Data Connection Sources, Egress Policies',
-            purpose: 'Secure outbound network access',
-          },
-          {
-            layer: 'Storage',
-            technology: 'Foundry Datasets',
-            purpose: 'Structured tabular storage with full lineage',
-          },
-          {
-            layer: 'Alerting Pipeline',
-            technology: 'Incremental Transforms',
-            purpose: 'Deduplicated append-only alert tracking',
-          },
-          {
-            layer: 'Semantic Layer',
-            technology: 'Foundry Ontology',
-            purpose: 'Object types with conditional formatting',
-          },
-          {
-            layer: 'Automation',
-            technology: 'Foundry Automate (Object Sentinel)',
-            purpose: 'Trigger-based email notifications',
-          },
-          {
-            layer: 'Backend Functions',
-            technology: 'TypeScript v2, OSDK Functions',
-            purpose: 'Server-side API calls, AI generation',
-          },
-          {
-            layer: 'AI/LLM',
-            technology: 'GPT-5.5 via Foundry LLM Proxy',
-            purpose: 'Threat summaries, weekly digest, smart alerts',
-          },
-          {
-            layer: 'Frontend',
-            technology: 'React, TypeScript, Recharts, CSS Modules',
-            purpose: 'Interactive dashboard with dark space theme',
-          },
-          {
-            layer: 'Client SDK',
-            technology: 'OSDK (@osdk/react)',
-            purpose: 'Type-safe Ontology access from React',
-          },
-          {
-            layer: 'Scheduling',
-            technology: 'Foundry Schedules (cron)',
-            purpose: 'Daily automated data refresh',
-          },
+          { layer: 'Data Ingestion', technology: 'Python (Polars), Lightweight Transforms', purpose: 'Pull & flatten NASA API data' },
+          { layer: 'External APIs', technology: 'Data Connection Sources, Egress Policies', purpose: 'Secure outbound network access' },
+          { layer: 'Storage', technology: 'Foundry Datasets', purpose: 'Structured tabular storage with full lineage' },
+          { layer: 'Alerting Pipeline', technology: 'Incremental Transforms', purpose: 'Deduplicated append-only alert tracking' },
+          { layer: 'Semantic Layer', technology: 'Foundry Ontology', purpose: 'Object types with conditional formatting' },
+          { layer: 'Automation', technology: 'Foundry Automate (Object Sentinel)', purpose: 'Trigger-based email notifications' },
+          { layer: 'Backend Functions', technology: 'TypeScript v2, OSDK Functions', purpose: 'Server-side API calls, AI generation' },
+          { layer: 'AI/LLM', technology: 'GPT-5.5 via Foundry LLM Proxy', purpose: 'Threat summaries, weekly digest, smart alerts' },
+          { layer: 'Frontend', technology: 'React, TypeScript, Recharts, CSS Modules', purpose: 'Interactive dashboard with dark space theme' },
+          { layer: 'Client SDK', technology: 'OSDK (@osdk/react)', purpose: 'Type-safe Ontology access from React' },
+          { layer: 'Scheduling', technology: 'Foundry Schedules (cron)', purpose: 'Daily automated data refresh' },
         ],
         keyDecisions: [
           {
             title: '1. On-demand history vs. stored history',
-            description:
-              'Rather than storing every asteroids full close approach history (which would grow endlessly), the app fetches it live from NASAs CAD API when you click an asteroid. Zero storage cost, always current data.',
+            description: 'Rather than storing every asteroids full close approach history (which would grow endlessly), the app fetches it live from NASAs CAD API when you click an asteroid. Zero storage cost, always current data.',
           },
           {
             title: '2. Incremental deduplication with expiry',
-            description:
-              'The main dataset rebuilds daily (SNAPSHOT), but the alerts dataset is incremental (append-only). Alerts are deduplicated within an 8-day window — the same asteroid wont trigger repeated notifications during a single approach, but can re-trigger if it returns months later.',
+            description: 'The main dataset rebuilds daily (SNAPSHOT), but the alerts dataset is incremental (append-only). Alerts are deduplicated within an 8-day window — the same asteroid wont trigger repeated notifications during a single approach, but can re-trigger if it returns months later.',
           },
           {
             title: '3. Server-side Functions as API proxy',
-            description:
-              'The React app runs in a Foundry dev environment with restrictive Content Security Policy, blocking direct external API calls. A TypeScript Function handles the NASA API calls server-side, returning structured data through OSDK — no CSP issues.',
+            description: 'The React app runs in a Foundry dev environment with restrictive Content Security Policy, blocking direct external API calls. A TypeScript Function handles the NASA API calls server-side, returning structured data through OSDK — no CSP issues.',
           },
         ],
       },
