@@ -6,45 +6,27 @@ import ProjectCard from './ProjectCard';
 const SAMPLE_PROJECTS = [
   {
     id: 1,
-    title: 'Custom Steel Artwork',
-    category: 'Art',
-    description: 'Beautiful hand-forged steel sculpture featuring geometric patterns',
-    image: 'sculpture.jpg',
+    title: 'Spotify Analysis',
+    category: 'Data Analysis',
+    description: 'Analyze your Spotify listening habits and discover insights about your music taste',
+    image: '🎵',
+    link: '#',
   },
   {
     id: 2,
-    title: 'Iron Gate Design',
-    category: 'Gates',
-    description: 'Ornate wrought iron gate with intricate detailing',
-    image: 'gate.jpg',
+    title: 'Asteroid Watch',
+    category: 'Space Tech',
+    description: 'Near-Earth Object Early Warning System - Track and monitor asteroid trajectories',
+    image: '🪨',
+    link: '#',
   },
   {
     id: 3,
-    title: 'Kitchen Tools Collection',
-    category: 'Tools',
-    description: 'Professional-grade handcrafted kitchen implements',
-    image: 'tools.jpg',
-  },
-  {
-    id: 4,
-    title: 'Decorative Hardware',
-    category: 'Decor',
-    description: 'Unique metal fixtures and decorative elements',
-    image: 'hardware.jpg',
-  },
-  {
-    id: 5,
-    title: 'Custom Weapons',
-    category: 'Weaponry',
-    description: 'Historically inspired forged weapons and armor',
-    image: 'weapons.jpg',
-  },
-  {
-    id: 6,
-    title: 'Jewelry Collection',
-    category: 'Jewelry',
-    description: 'Delicate metal jewelry pieces with contemporary designs',
-    image: 'jewelry.jpg',
+    title: 'Project Request App',
+    category: 'Web App',
+    description: 'Streamlined app for managing and tracking project requests from users',
+    image: '📋',
+    link: '#',
   },
 ];
 
@@ -62,7 +44,7 @@ export default function ProjectGrid() {
     <section id="projects" className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-secondary mb-12">
-          My Foundry Projects
+          My Projects
         </h2>
 
         <div className="flex justify-center gap-3 mb-12 flex-wrap">
