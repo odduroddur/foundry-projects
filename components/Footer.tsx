@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">About</h3>
             <p className="text-gray-300">
-              Passionate foundry artisan creating unique metal works and designs.
+              Developer passionate about data integration, space technology, and building impactful applications with Palantir Foundry.
             </p>
           </div>
           <div>
@@ -20,13 +20,13 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition">
-                  Gallery
+                <a href="https://github.com/odduroddur" className="hover:text-primary transition">
+                  GitHub
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-primary transition">
-                  Services
+                  Resume
                 </a>
               </li>
             </ul>
@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-700 pt-8 text-center text-gray-300">
-          <p>&copy; 2024 Foundry Projects. All rights reserved.</p>
+          <p>&copy; 2024 My Portfolio. All rights reserved.</p>
         </div>
       </div>
     </footer>
