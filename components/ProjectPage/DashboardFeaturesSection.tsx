@@ -54,25 +54,23 @@ export default function DashboardFeaturesSection({ features, dailyFlow }: Dashbo
       {/* Modal */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50"
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-2 z-50"
           onClick={() => setSelectedImage(null)}
         >
           <div 
-            className="bg-slate-800 rounded-lg p-6 max-w-6xl max-h-[95vh] overflow-auto"
+            className="relative bg-slate-800 rounded-lg w-[95vw] h-[95vh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex justify-end mb-4">
-              <button
-                onClick={() => setSelectedImage(null)}
-                className="text-gray-400 hover:text-white text-2xl"
-              >
-                ✕
-              </button>
-            </div>
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl z-10"
+            >
+              ✕
+            </button>
             <img 
               src={selectedImage} 
               alt="Expanded view"
-              style={{ width: '100%', height: 'auto' }}
+              className="flex-1 object-contain p-6"
             />
           </div>
         </div>
