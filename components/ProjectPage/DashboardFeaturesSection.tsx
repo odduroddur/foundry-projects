@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import ImagePlaceholder from '../ImagePlaceholder';
 import { DashboardFeature } from '@/lib/projects';
 
@@ -10,8 +9,6 @@ interface DashboardFeaturesSectionProps {
 }
 
 export default function DashboardFeaturesSection({ features, dailyFlow }: DashboardFeaturesSectionProps) {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
   return (
     <section className="bg-slate-900 py-16 px-4">
       <div className="max-w-6xl mx-auto">
@@ -32,8 +29,7 @@ export default function DashboardFeaturesSection({ features, dailyFlow }: Dashbo
               <div key={i}>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">{feature.title}</h4>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
-                <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center cursor-pointer hover:bg-slate-700 transition"
-                     onClick={() => feature.imagePlaceholder.startsWith('http') && setSelectedImage(feature.imagePlaceholder)}>
+                <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
                   {feature.imagePlaceholder.startsWith('http') ? (
                     <img
                       src={feature.imagePlaceholder}
@@ -50,31 +46,6 @@ export default function DashboardFeaturesSection({ features, dailyFlow }: Dashbo
           </div>
         </div>
       </div>
-
-      {/* Modal */}
-      {selectedImage && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div 
-            className="relative flex items-center justify-center"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 text-white hover:text-gray-300 text-3xl z-10"
-            >
-              ✕
-            </button>
-            <img 
-              src={selectedImage} 
-              alt="Expanded view"
-              className="max-h-[80vh] max-w-[90vw] object-contain"
-            />
-          </div>
-        </div>
-      )}
     </section>
   );
 }
