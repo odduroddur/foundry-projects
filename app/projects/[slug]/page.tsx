@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getProjectBySlug } from '@/lib/projects';
 import HeroSection from '@/components/ProjectPage/HeroSection';
-import TechStackSection from '@/components/ProjectPage/TechStackSection';
 import WhatWhySection from '@/components/ProjectPage/WhatWhySection';
 import DashboardFeaturesSection from '@/components/ProjectPage/DashboardFeaturesSection';
 import UnderTheHoodSection from '@/components/ProjectPage/UnderTheHoodSection';
@@ -40,8 +39,6 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         heroImagePlaceholder={project.heroImagePlaceholder}
         heroVideoPlaceholder={project.heroVideoPlaceholder}
       />
-
-      <TechStackSection technologies={project.technologies} />
 
       <WhatWhySection
         problem={project.sections.whatWhy.problem}
