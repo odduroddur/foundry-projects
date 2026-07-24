@@ -51,7 +51,7 @@ export const projects: ProjectContent[] = [
     title: 'Asteroid Watch — Near-Earth Object Early Warning System',
     emoji: '☄️',
     tagline: 'A real-time asteroid monitoring dashboard that pulls live data from NASA, detects close approaches, and sends AI-powered alerts when space rocks get too close for comfort.',
-    heroImagePlaceholder: '[Screenshot: Full dashboard view showing the dark space theme — scatter plot, AI 7-Day Outlook, table with ALERT badge, detail panel with AI analysis and close approach history chart]',
+    heroImagePlaceholder: 'https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/asteroid-watch/00%20Dashboard.png',
     heroVideoPlaceholder: '[Short video — click a dot on scatter plot → table flashes and scrolls → detail panel opens with AI analysis loading → history chart renders]',
     technologies: [
       'Python',
@@ -95,34 +95,34 @@ export const projects: ProjectContent[] = [
           {
             title: '7-Day Outlook (top)',
             description: 'AI-generated summary of the weeks incoming asteroids with color-coded keywords',
-            imagePlaceholder: 'https://github.com/odduroddur/foundry-projects/blob/26e88924059854de145fc1684e6e51cdb026f551/app/asteroid-watch/02%20Outlook.png',
+            imagePlaceholder: 'https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/asteroid-watch/02%20Outlook.png',
           },
           {
             title: 'Threat Assessment Scatter Plot',
             description:
               'Every asteroid plotted by size vs. distance. Bigger + closer = scarier. Red dots = close approach alerts. Yellow borders = potentially hazardous.',
-            imagePlaceholder: '[Screenshot: Scatter plot with mixed dots, one red, several with yellow borders]',
+            imagePlaceholder: 'http://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/asteroid-watch/03%20Scatter%20Plot.png',
           },
           {
             title: 'Asteroid Table',
             description: 'All incoming asteroids sorted by date. Click any row to open detail panel and the row flashes cyan.',
-            imagePlaceholder: '[Screenshot: Table with ALERT/PHA/OK badges, one row highlighted]',
+            imagePlaceholder: 'https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/asteroid-watch/04%20Table.png',
           },
           {
             title: 'Detail Panel',
             description: 'Full asteroid profile: AI threat analysis, orbital data, observation history, NASA JPL link.',
-            imagePlaceholder: '[Screenshot: Detail panel showing AI Analysis + Close Approach section]',
+            imagePlaceholder: 'https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/asteroid-watch/05%20Detail%20Panel.png',
           },
           {
             title: 'Close Approach History',
             description:
               'On-demand chart showing every Earth pass from 1900-2200, fetched live from NASA JPL API. No data stored — always fresh.',
-            imagePlaceholder: '[Screenshot: Bar chart with blue/cyan bars and red threshold line]',
+            imagePlaceholder: 'https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/asteroid-watch/06%20Close%20Approach%20History.png',
           },
           {
             title: 'Email Alerts',
             description: 'AI-written notifications with human-scale comparisons, links to the dashboard and NASA JPL.',
-            imagePlaceholder: '[Screenshot: Email with asteroid name, distance, size, verdict]',
+            imagePlaceholder: 'https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/asteroid-watch/07%20Email.png',
           },
         ],
         dailyFlow:
