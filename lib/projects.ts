@@ -95,7 +95,7 @@ export const projects: ProjectContent[] = [
           {
             title: '7-Day Outlook (top)',
             description: 'AI-generated summary of the weeks incoming asteroids with color-coded keywords',
-            imagePlaceholder: 'https://raw.githubusercontent.com/odduroddur/foundry-projects/main/public/images/7-day-outlook.png',
+            imagePlaceholder: 'https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/asteroid-watch/02%20Outlook.png',
           },
           {
             title: 'Threat Assessment Scatter Plot',
