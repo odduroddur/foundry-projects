@@ -20,7 +20,7 @@ export default function UnderTheHoodSection({
 
         <div className="mb-12">
           <h3 className="text-2xl font-bold mb-6 text-blue-400">Architecture Diagram</h3>
-          <div className="bg-slate-800 rounded-lg p-6 w-full overflow-x-auto" style={{ minHeight: '600px' }}>
+          <div className="bg-slate-800 rounded-lg p-6 w-full" style={{ minHeight: '600px', overflowX: 'auto' }}>
             <div dangerouslySetInnerHTML={{ __html: architectureDiagramSvg }} />
           </div>
         </div>
