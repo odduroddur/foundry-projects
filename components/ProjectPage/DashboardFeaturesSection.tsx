@@ -29,7 +29,7 @@ export default function DashboardFeaturesSection({ features, dailyFlow }: Dashbo
               <div key={i}>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">{feature.title}</h4>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
-                <div className="bg-slate-800 rounded-lg p-6 overflow-hidden">
+                <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
                   {feature.imagePlaceholder.startsWith('http') ? (
                     <img
                       src={feature.imagePlaceholder}
