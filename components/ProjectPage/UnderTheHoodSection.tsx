@@ -22,7 +22,7 @@ export default function UnderTheHoodSection({
           <h3 className="text-2xl font-bold mb-6 text-blue-400">Architecture Diagram</h3>
           <div className="bg-slate-800 rounded-lg p-6 w-full" style={{ minHeight: '600px', overflowX: 'auto' }}>
             <img 
-              src={architectureDiagramSvg} 
+              src="https://raw.githubusercontent.com/odduroddur/foundry-projects/main/app/asteroid-watch/08%20Architecture%20Diagram.svg" 
               alt="Architecture Diagram"
               style={{ maxHeight: '100%', width: 'auto' }}
             />
