@@ -23,15 +23,23 @@ export default function DashboardFeaturesSection({ features, dailyFlow }: Dashbo
 
         <div className="mb-12">
           <h3 className="text-2xl font-bold mb-6 text-blue-400">Dashboard Experience</h3>
-
+https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/asteroid-watch/02%20Outlook.png
           <div className="space-y-8">
             {features.map((feature, i) => (
               <div key={i}>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">{feature.title}</h4>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <div className="bg-slate-800 rounded-lg p-6">
+                {feature.imagePlaceholder.startsWith('http') ? (
+                  <img 
+                    src={feature.imagePlaceholder} 
+                    alt={feature.title} 
+                    className="w-full rounded-lg"
+                  />
+                ) : (
                   <ImagePlaceholder placeholder={feature.imagePlaceholder} height="h-40" />
-                </div>
+                )}
+              </div>
               </div>
             ))}
           </div>
