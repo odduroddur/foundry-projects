@@ -23,7 +23,7 @@ export default function DashboardFeaturesSection({ features, dailyFlow }: Dashbo
 
         <div className="mb-12">
           <h3 className="text-2xl font-bold mb-6 text-blue-400">Dashboard Experience</h3>
-https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/asteroid-watch/02%20Outlook.png
+
           <div className="space-y-8">
             {features.map((feature, i) => (
               <div key={i}>
