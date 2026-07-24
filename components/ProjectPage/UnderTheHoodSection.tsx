@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { TechStackItem, KeyDecision } from '@/lib/projects';
 
 interface UnderTheHoodSectionProps {
@@ -13,6 +14,8 @@ export default function UnderTheHoodSection({
   techStack,
   keyDecisions,
 }: UnderTheHoodSectionProps) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="py-16 px-4">
       <div className="max-w-6xl mx-auto">
@@ -20,14 +23,45 @@ export default function UnderTheHoodSection({
 
         <div className="mb-12">
           <h3 className="text-2xl font-bold mb-6 text-blue-400">Architecture Diagram</h3>
-          <div className="bg-slate-800 rounded-lg p-6 w-full" style={{ minHeight: '600px', overflowX: 'auto' }}>
+          <div className="bg-slate-800 rounded-lg p-6 w-full cursor-pointer hover:bg-slate-700 transition" 
+               style={{ minHeight: '600px', overflowX: 'auto' }}
+               onClick={() => setIsModalOpen(true)}>
             <img 
               src="https://raw.githubusercontent.com/odduroddur/foundry-projects/main/app/asteroid-watch/08%20Architecture%20Diagram.svg" 
               alt="Architecture Diagram"
               style={{ maxHeight: '100%', width: 'auto' }}
+              className="cursor-pointer"
             />
           </div>
         </div>
+
+        {/* Modal */}
+        {isModalOpen && (
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50"
+            onClick={() => setIsModalOpen(false)}
+          >
+            <div 
+              className="bg-slate-800 rounded-lg p-6 max-w-4xl max-h-[90vh] overflow-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="text-2xl font-bold text-blue-400">Architecture Diagram</h3>
+                <button
+                  onClick={() => setIsModalOpen(false)}
+                  className="text-gray-400 hover:text-white text-2xl"
+                >
+                  ✕
+                </button>
+              </div>
+              <img 
+                src="https://raw.githubusercontent.com/odduroddur/foundry-projects/main/app/asteroid-watch/08%20Architecture%20Diagram.svg" 
+                alt="Architecture Diagram"
+                style={{ width: '100%', height: 'auto' }}
+              />
+            </div>
+          </div>
+        )}
 
         <div className="mb-12">
           <h3 className="text-2xl font-bold mb-6 text-blue-400">Technology Stack</h3>
