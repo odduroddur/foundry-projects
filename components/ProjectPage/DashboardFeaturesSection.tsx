@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import ImagePlaceholder from '../ImagePlaceholder';
 import { DashboardFeature } from '@/lib/projects';
 
@@ -11,6 +11,22 @@ interface DashboardFeaturesSectionProps {
 
 export default function DashboardFeaturesSection({ features, dailyFlow }: DashboardFeaturesSectionProps) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const fullscreenRef = useRef<HTMLDivElement>(null);
+
+  const handleFullscreen = () => {
+    if (fullscreenRef.current) {
+      if (fullscreenRef.current.requestFullscreen) {
+        fullscreenRef.current.requestFullscreen();
+      }
+    }
+  };
+
+  const handleExitFullscreen = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    }
+    setSelectedImage(null);
+  };
 
   return (
     <section className="bg-slate-900 py-16 px-4">
@@ -51,28 +67,25 @@ export default function DashboardFeaturesSection({ features, dailyFlow }: Dashbo
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Fullscreen Modal */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-2 z-50"
-          onClick={() => setSelectedImage(null)}
+          ref={fullscreenRef}
+          className="fixed inset-0 bg-black flex items-center justify-center z-50"
+          onClick={handleExitFullscreen}
         >
-          <div 
-            className="relative bg-slate-800 rounded-lg w-[95vw] h-[95vh] flex flex-col"
-            onClick={(e) => e.stopPropagation()}
+          <button
+            onClick={handleExitFullscreen}
+            className="absolute top-4 right-4 text-white hover:text-gray-300 text-3xl z-10"
           >
-            <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl z-10"
-            >
-              ✕
-            </button>
-            <img 
-              src={selectedImage} 
-              alt="Expanded view"
-              className="flex-1 object-contain p-6"
-            />
-          </div>
+            ✕
+          </button>
+          <img 
+            src={selectedImage} 
+            alt="Fullscreen view"
+            className="max-w-full max-h-full object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
         </div>
       )}
     </section>
