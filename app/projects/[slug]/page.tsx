@@ -49,7 +49,10 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         impact={project.sections.whatWhy.impact}
       />
 
-      <DashboardFeaturesSection features={project.sections.howItWorks.dashboardFeatures} />
+      <DashboardFeaturesSection
+        features={project.sections.howItWorks.dashboardFeatures}
+        dailyFlow={project.sections.howItWorks.dailyFlow}
+      />
 
       <UnderTheHoodSection
         techStack={project.sections.underTheHood.techStack}

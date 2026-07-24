@@ -5,13 +5,21 @@ import { DashboardFeature } from '@/lib/projects';
 
 interface DashboardFeaturesSectionProps {
   features: DashboardFeature[];
+  dailyFlow: string;
 }
 
-export default function DashboardFeaturesSection({ features }: DashboardFeaturesSectionProps) {
+export default function DashboardFeaturesSection({ features, dailyFlow }: DashboardFeaturesSectionProps) {
   return (
     <section className="bg-slate-900 py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-12">Section 2: How It Works</h2>
+
+        <div className="mb-12">
+          <h3 className="text-2xl font-bold mb-6 text-blue-400">User Workflow - Daily Flow</h3>
+          <div className="bg-slate-800 rounded-lg p-6">
+            <pre className="text-gray-300 text-sm whitespace-pre-wrap font-mono">{dailyFlow}</pre>
+          </div>
+        </div>
 
         <div className="mb-12">
           <h3 className="text-2xl font-bold mb-6 text-blue-400">Dashboard Experience</h3>

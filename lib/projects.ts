@@ -32,6 +32,7 @@ export interface ProjectContent {
     };
     howItWorks: {
       dashboardFeatures: DashboardFeature[];
+      dailyFlow: string;
     };
     underTheHood: {
       techStack: TechStackItem[];
@@ -72,7 +73,8 @@ export const projects: ProjectContent[] = [
     ],
     sections: {
       whatWhy: {
-        problem: 'NASA tracks over 61,000 near-Earth asteroids, with new close approaches predicted daily. The raw data is scattered across multiple NASA APIs, returned as deeply nested JSON, and lacks any alerting mechanism. If something noteworthy is heading our way, you need to check manually.',
+        problem:
+          'NASA tracks over 61,000 near-Earth asteroids, with new close approaches predicted daily. The raw data is scattered across multiple NASA APIs, returned as deeply nested JSON, and lacks any alerting mechanism. If something noteworthy is heading our way, you need to check manually.',
         solution: [
           'Pulls asteroid data daily from 3 NASA APIs and enriches it into a clean, queryable dataset',
           'Detects threats automatically using configurable distance thresholds with deduplicated alerting',
@@ -118,6 +120,8 @@ export const projects: ProjectContent[] = [
             imagePlaceholder: '[Screenshot: Email with asteroid name, distance, size, verdict]',
           },
         ],
+        dailyFlow:
+          '7:00 AM → System pulls next 7 days of asteroid data from NASA\n→ Enriches with orbital parameters + discovery info\n→ Checks for close approaches (< threshold)\n→ If new threat found → AI writes a briefing → Email sent',
       },
       underTheHood: {
         techStack: [
