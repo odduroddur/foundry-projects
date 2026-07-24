@@ -55,6 +55,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
       />
 
       <UnderTheHoodSection
+        architectureDiagramSvg={project.sections.underTheHood.architectureDiagramSvg}
         techStack={project.sections.underTheHood.techStack}
         keyDecisions={project.sections.underTheHood.keyDecisions}
       />

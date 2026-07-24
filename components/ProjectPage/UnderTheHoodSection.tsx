@@ -3,11 +3,13 @@
 import { TechStackItem, KeyDecision } from '@/lib/projects';
 
 interface UnderTheHoodSectionProps {
+  architectureDiagramSvg: string;
   techStack: TechStackItem[];
   keyDecisions: KeyDecision[];
 }
 
 export default function UnderTheHoodSection({
+  architectureDiagramSvg,
   techStack,
   keyDecisions,
 }: UnderTheHoodSectionProps) {
@@ -15,6 +17,13 @@ export default function UnderTheHoodSection({
     <section className="py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-12">Section 3: Under the Hood</h2>
+
+        <div className="mb-12">
+          <h3 className="text-2xl font-bold mb-6 text-blue-400">Architecture Diagram</h3>
+          <div className="bg-slate-800 rounded-lg p-6 overflow-x-auto">
+            <div dangerouslySetInnerHTML={{ __html: architectureDiagramSvg }} />
+          </div>
+        </div>
 
         <div className="mb-12">
           <h3 className="text-2xl font-bold mb-6 text-blue-400">Technology Stack</h3>
