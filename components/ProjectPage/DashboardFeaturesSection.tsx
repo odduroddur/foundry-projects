@@ -58,11 +58,10 @@ export default function DashboardFeaturesSection({ features, dailyFlow }: Dashbo
           onClick={() => setSelectedImage(null)}
         >
           <div 
-            className="bg-slate-800 rounded-lg p-6 max-w-4xl max-h-[90vh] overflow-auto"
+            className="bg-slate-800 rounded-lg p-6 max-w-6xl max-h-[95vh] overflow-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="text-2xl font-bold text-blue-400">Full View</h3>
+            <div className="flex justify-end mb-4">
               <button
                 onClick={() => setSelectedImage(null)}
                 className="text-gray-400 hover:text-white text-2xl"
