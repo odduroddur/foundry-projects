@@ -17,20 +17,20 @@ export default function AsteroidProject() {
           </p>
           
           {/* HERO SCREENSHOTS */}
-          <div className="bg-slate-800 rounded-lg p-8 mb-8">
+          <div className="bg-slate-800 rounded-lg p-8 mb-8 overflow-hidden flex justify-center">
             <img 
               src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/00%20Dashboard.png"
               alt="Full dashboard view"
-              className="w-full h-96 rounded object-cover"
+              className="max-w-full h-auto rounded object-contain"
+              style={{ maxHeight: '500px' }}
             />
           </div>
 
-          <div className="bg-slate-800 rounded-lg p-8">
+          <div className="bg-slate-800 rounded-lg p-8 overflow-hidden flex justify-center">
             <video 
-              width="100%" 
-              height="400"
               controls 
-              className="rounded"
+              className="max-w-full h-auto rounded"
+              style={{ maxHeight: '500px' }}
               src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/01%20Asteroid%20Video.mp4"
             />
           </div>
@@ -107,11 +107,12 @@ export default function AsteroidProject() {
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">7-Day Outlook (top)</h4>
                 <p className="text-gray-300 mb-4">AI-generated summary of the weeks incoming asteroids with color-coded keywords</p>
-                <div className="bg-slate-800 rounded-lg p-6">
+                <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
                   <img 
                     src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/02%20Outlook.png"
                     alt="7-Day Outlook banner"
-                    className="w-full h-32 rounded object-cover"
+                    className="max-w-full h-auto rounded object-contain"
+                    style={{ maxHeight: '500px' }}
                   />
                 </div>
               </div>
@@ -119,11 +120,12 @@ export default function AsteroidProject() {
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Threat Assessment Scatter Plot</h4>
                 <p className="text-gray-300 mb-4">Every asteroid plotted by size vs. distance. Bigger + closer = scarier. Red dots = close approach alerts. Yellow borders = potentially hazardous.</p>
-                <div className="bg-slate-800 rounded-lg p-6">
+                <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
                   <img 
                     src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/03%20Scatter%20Plot.png"
                     alt="Scatter plot"
-                    className="w-full h-64 rounded object-cover"
+                    className="max-w-full h-auto rounded object-contain"
+                    style={{ maxHeight: '500px' }}
                   />
                 </div>
               </div>
@@ -131,11 +133,12 @@ export default function AsteroidProject() {
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Asteroid Table</h4>
                 <p className="text-gray-300 mb-4">All incoming asteroids sorted by date. Click any row to open detail panel and the row flashes cyan.</p>
-                <div className="bg-slate-800 rounded-lg p-6">
+                <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
                   <img 
                     src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/04%20Table.png"
                     alt="Asteroid table with badges"
-                    className="w-full h-48 rounded object-cover"
+                    className="max-w-full h-auto rounded object-contain"
+                    style={{ maxHeight: '500px' }}
                   />
                 </div>
               </div>
@@ -143,11 +146,12 @@ export default function AsteroidProject() {
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Detail Panel</h4>
                 <p className="text-gray-300 mb-4">Full asteroid profile: AI threat analysis, orbital data, observation history, NASA JPL link.</p>
-                <div className="bg-slate-800 rounded-lg p-6">
+                <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
                   <img 
                     src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/05%20Detail%20Panel.png"
                     alt="Detail panel with AI analysis"
-                    className="w-full h-48 rounded object-cover"
+                    className="max-w-full h-auto rounded object-contain"
+                    style={{ maxHeight: '500px' }}
                   />
                 </div>
               </div>
@@ -155,11 +159,12 @@ export default function AsteroidProject() {
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Close Approach History</h4>
                 <p className="text-gray-300 mb-4">On-demand chart showing every Earth pass from 1900-2200, fetched live from NASA JPL API. No data stored — always fresh.</p>
-                <div className="bg-slate-800 rounded-lg p-6">
+                <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
                   <img 
                     src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/06%20Close%20Approach%20History.png"
                     alt="Close approach history chart"
-                    className="w-full h-48 rounded object-cover"
+                    className="max-w-full h-auto rounded object-contain"
+                    style={{ maxHeight: '500px' }}
                   />
                 </div>
               </div>
@@ -167,11 +172,12 @@ export default function AsteroidProject() {
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Email Alerts</h4>
                 <p className="text-gray-300 mb-4">AI-written notifications with human-scale comparisons, linking directly to the dashboard, the alerted object in Foundry, and its NASA JPL page.</p>
-                <div className="bg-slate-800 rounded-lg p-6">
+                <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
                   <img 
                     src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/07%20Email.png"
                     alt="Email notification"
-                    className="w-full h-40 rounded object-cover"
+                    className="max-w-full h-auto rounded object-contain"
+                    style={{ maxHeight: '500px' }}
                   />
                 </div>
               </div>
@@ -187,11 +193,12 @@ export default function AsteroidProject() {
 
           <div className="mb-12">
             <h3 className="text-2xl font-bold mb-6 text-blue-400">Architecture Diagram</h3>
-            <div className="bg-slate-800 rounded-lg p-6 overflow-x-auto">
+            <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
               <img 
                 src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/08%20Architecture%20Diagram.svg"
                 alt="Architecture Diagram"
-                className="w-full rounded"
+                className="max-w-full h-auto rounded object-contain"
+                style={{ maxHeight: '600px' }}
               />
             </div>
           </div>
