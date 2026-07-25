@@ -46,8 +46,8 @@ export default function AsteroidProject() {
         </div>
       </section>
 
-      {/* WHAT & WHY */}
-      <section className="py-16 px-4">
+      {/* SECTION 1: WHAT & WHY */}
+      <section className="bg-slate-900 py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12">Section 1: What & Why</h2>
 
@@ -83,7 +83,7 @@ export default function AsteroidProject() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="bg-slate-900 py-16 px-4">
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12">Section 2: How It Works</h2>
 
@@ -114,7 +114,7 @@ export default function AsteroidProject() {
 
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Threat Assessment Scatter Plot</h4>
-                <p className="text-gray-300 mb-4">Every asteroid plotted by size vs. distance. Bigger and closer = scarier. Click any dot to highlight it in the table below and open its detail panel.</p>
+                <p className="text-gray-300 mb-4">Every asteroid plotted by size vs. distance. Bigger and closer = scarier. Click any dot to highlight it in the table below and open its detail pa[...]
                 <div className="bg-slate-800 rounded-lg p-6">
                   <p className="text-gray-400 mb-4">[Screenshot: Scatter plot]</p>
                   <div className="bg-slate-700 h-64 rounded flex items-center justify-center">
@@ -158,7 +158,7 @@ export default function AsteroidProject() {
 
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Email Alerts</h4>
-                <p className="text-gray-300 mb-4">AI-written notifications with human-scale comparisons, linking directly to the dashboard, the alerted object in Foundry, and its NASA JPL page.</p>
+                <p className="text-gray-300 mb-4">AI-written notifications with human-scale comparisons, linking directly to the dashboard, the alerted object in Foundry, and its NASA JPL page.</[...]
                 <div className="bg-slate-800 rounded-lg p-6">
                   <p className="text-gray-400 mb-4">[Screenshot: Email notification]</p>
                   <div className="bg-slate-700 h-32 rounded flex items-center justify-center">
@@ -172,7 +172,7 @@ export default function AsteroidProject() {
       </section>
 
       {/* UNDER THE HOOD */}
-      <section className="py-16 px-4">
+      <section className="bg-slate-900 py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12">Section 3: Under the Hood</h2>
 
