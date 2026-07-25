@@ -11,15 +11,15 @@ const SAMPLE_PROJECTS = [
     category: 'Data Analysis',
     description: 'Built with Palantir Foundry - Comprehensive music consumption analytics and listener insights platform',
     image: '🎵',
-    link: '/projects/spotify-analysis',
+    link: '/spotify-analysis',
   },
   {
     id: 2,
     title: 'Asteroid Watch',
     category: 'Space Tech',
     description: 'Near-Earth Object Early Warning System - Real-time tracking and trajectory analysis powered by Palantir Foundry',
-    image: '🪨',
-    link: '/projects/asteroid-watch',
+    image: '☄️',
+    link: '/asteroid-watch',
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const SAMPLE_PROJECTS = [
     category: 'Web App',
     description: 'Streamlined application for managing project requests with data integration via Palantir Foundry',
     image: '📋',
-    link: '/projects/project-request-app',
+    link: '/project-request-app',
   },
 ];
 
