@@ -119,7 +119,7 @@ export default function AsteroidProject() {
 
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Threat Assessment Scatter Plot</h4>
-                <p className="text-gray-300 mb-4">Every asteroid plotted by size vs. distance. Bigger + closer = scarier. Red dots = close approach alerts. Yellow borders = potentially hazardous.</p>
+                <p className="text-gray-300 mb-4">Every asteroid plotted by size vs. distance. Bigger and closer = scarier. Click any dot to highlight it in the table below and open its detail panel.</p>
                 <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
                   <img 
                     src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/03%20Scatter%20Plot.png"
