@@ -17,16 +17,21 @@ export default function AsteroidProject() {
           {/* HERO SCREENSHOTS PLACEHOLDER */}
           <div className="bg-slate-800 rounded-lg p-8 mb-8 text-center">
             <p className="text-gray-400 mb-4">[Screenshot: Full dashboard view]</p>
-            <div className="bg-slate-700 h-96 rounded flex items-center justify-center">
-              <span className="text-gray-500">Dashboard Placeholder</span>
-            </div>
+            <img 
+              src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/asteroid-watch/00%20Dashboard.png"
+              alt="Full dashboard view"
+              className="w-full rounded"
+            />
           </div>
 
           <div className="bg-slate-800 rounded-lg p-8 text-center">
             <p className="text-gray-400 mb-4">[Video: Interactive demo]</p>
-            <div className="bg-slate-700 h-64 rounded flex items-center justify-center">
-              <span className="text-gray-500">Video Placeholder</span>
-            </div>
+            <video 
+              width="100%" 
+              controls 
+              className="rounded"
+              src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/asteroid-watch/01%20Asteroid%20Video.mp4"
+            />
           </div>
         </div>
       </section>
@@ -105,10 +110,11 @@ export default function AsteroidProject() {
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">7-Day Outlook (top)</h4>
                 <p className="text-gray-300 mb-4">AI-generated summary of the weeks incoming asteroids with color-coded keywords</p>
                 <div className="bg-slate-800 rounded-lg p-6">
-                  <p className="text-gray-400 mb-4">[Screenshot: 7-Day Outlook banner]</p>
-                  <div className="bg-slate-700 h-24 rounded flex items-center justify-center">
-                    <span className="text-gray-500">7-Day Outlook Placeholder</span>
-                  </div>
+                  <img 
+                    src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/asteroid-watch/02%20Outlook.png"
+                    alt="7-Day Outlook banner"
+                    className="w-full rounded"
+                  />
                 </div>
               </div>
 
@@ -116,10 +122,11 @@ export default function AsteroidProject() {
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Threat Assessment Scatter Plot</h4>
                 <p className="text-gray-300 mb-4">Every asteroid plotted by size vs. distance. Bigger and closer = scarier. Click any dot to highlight it in the table below and open its detail panel.</p>
                 <div className="bg-slate-800 rounded-lg p-6">
-                  <p className="text-gray-400 mb-4">[Screenshot: Scatter plot]</p>
-                  <div className="bg-slate-700 h-64 rounded flex items-center justify-center">
-                    <span className="text-gray-500">Scatter Plot Placeholder</span>
-                  </div>
+                  <img 
+                    src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/asteroid-watch/03%20Scatter%20Plot.png"
+                    alt="Scatter plot"
+                    className="w-full rounded"
+                  />
                 </div>
               </div>
 
@@ -127,10 +134,11 @@ export default function AsteroidProject() {
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Asteroid Table</h4>
                 <p className="text-gray-300 mb-4">All incoming asteroids sorted by date. Click any row to open detail panel and the row flashes cyan.</p>
                 <div className="bg-slate-800 rounded-lg p-6">
-                  <p className="text-gray-400 mb-4">[Screenshot: Asteroid table with badges]</p>
-                  <div className="bg-slate-700 h-40 rounded flex items-center justify-center">
-                    <span className="text-gray-500">Table Placeholder</span>
-                  </div>
+                  <img 
+                    src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/asteroid-watch/04%20Table.png"
+                    alt="Asteroid table with badges"
+                    className="w-full rounded"
+                  />
                 </div>
               </div>
 
@@ -138,10 +146,11 @@ export default function AsteroidProject() {
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Detail Panel</h4>
                 <p className="text-gray-300 mb-4">Full asteroid profile: AI threat analysis, orbital data, observation history, NASA JPL link.</p>
                 <div className="bg-slate-800 rounded-lg p-6">
-                  <p className="text-gray-400 mb-4">[Screenshot: Detail panel with AI analysis]</p>
-                  <div className="bg-slate-700 h-40 rounded flex items-center justify-center">
-                    <span className="text-gray-500">Detail Panel Placeholder</span>
-                  </div>
+                  <img 
+                    src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/asteroid-watch/05%20Detail%20Panel.png"
+                    alt="Detail panel with AI analysis"
+                    className="w-full rounded"
+                  />
                 </div>
               </div>
 
@@ -149,10 +158,11 @@ export default function AsteroidProject() {
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Close Approach History</h4>
                 <p className="text-gray-300 mb-4">On-demand chart showing every Earth pass from 1900-2200, fetched live from NASA JPL API. No data stored — always fresh.</p>
                 <div className="bg-slate-800 rounded-lg p-6">
-                  <p className="text-gray-400 mb-4">[Screenshot: Close approach history chart]</p>
-                  <div className="bg-slate-700 h-40 rounded flex items-center justify-center">
-                    <span className="text-gray-500">History Chart Placeholder</span>
-                  </div>
+                  <img 
+                    src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/asteroid-watch/06%20Close%20Approach%20History.png"
+                    alt="Close approach history chart"
+                    className="w-full rounded"
+                  />
                 </div>
               </div>
 
@@ -160,10 +170,11 @@ export default function AsteroidProject() {
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Email Alerts</h4>
                 <p className="text-gray-300 mb-4">AI-written notifications with human-scale comparisons, linking directly to the dashboard, the alerted object in Foundry, and its NASA JPL page.</p>
                 <div className="bg-slate-800 rounded-lg p-6">
-                  <p className="text-gray-400 mb-4">[Screenshot: Email notification]</p>
-                  <div className="bg-slate-700 h-32 rounded flex items-center justify-center">
-                    <span className="text-gray-500">Email Placeholder</span>
-                  </div>
+                  <img 
+                    src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/asteroid-watch/07%20Email.png"
+                    alt="Email notification"
+                    className="w-full rounded"
+                  />
                 </div>
               </div>
             </div>
