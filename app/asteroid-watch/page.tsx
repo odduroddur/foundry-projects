@@ -193,12 +193,11 @@ export default function AsteroidProject() {
 
           <div className="mb-12">
             <h3 className="text-2xl font-bold mb-6 text-blue-400">Architecture Diagram</h3>
-            <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
+            <div className="bg-slate-800 rounded-lg p-6 overflow-x-auto">
               <img 
                 src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/08%20Architecture%20Diagram.svg"
                 alt="Architecture Diagram"
-                className="max-w-full h-auto rounded object-contain"
-                style={{ maxHeight: '600px' }}
+                className="w-full rounded"
               />
             </div>
           </div>
