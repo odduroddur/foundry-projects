@@ -8,8 +8,13 @@ export default function AsteroidProject() {
       {/* HERO SECTION */}
       <section className="bg-gradient-to-b from-slate-900 to-black py-20 px-4">
         <div className="max-w-6xl mx-auto">
+          {/* BACK BUTTON */}
+          <a href="/" className="inline-block mb-8 text-cyan-400 hover:text-cyan-300 transition">
+            ← Back to Portfolio
+          </a>
+
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
-            ☄️ Asteroid Watch — Near-Earth Object Early Warning System!
+            ☄️ Asteroid Watch — Near-Earth Object Early Warning System
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl">
             A real-time asteroid monitoring dashboard that pulls live data from NASA, detects close approaches, 
