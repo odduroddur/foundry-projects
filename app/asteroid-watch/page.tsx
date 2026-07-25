@@ -1,5 +1,3 @@
-'use client';
-
 export const revalidate = 0;
 
 export default function AsteroidProject() {
