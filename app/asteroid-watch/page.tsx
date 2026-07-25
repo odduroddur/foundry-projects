@@ -16,16 +16,7 @@ export default function AsteroidProject() {
             and sends AI-powered alerts when space rocks get too close for comfort.
           </p>
           
-          {/* HERO SCREENSHOTS */}
-          <div className="bg-slate-800 rounded-lg p-8 mb-8 overflow-hidden flex justify-center">
-            <img 
-              src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/00%20Dashboard.png"
-              alt="Full dashboard view"
-              className="max-w-full h-auto rounded object-contain"
-              style={{ maxHeight: '500px' }}
-            />
-          </div>
-
+          {/* HERO VIDEO */}
           <div className="bg-slate-800 rounded-lg p-8 overflow-hidden flex justify-center">
             <video 
               controls 
