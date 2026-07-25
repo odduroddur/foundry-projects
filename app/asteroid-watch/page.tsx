@@ -1,5 +1,7 @@
 'use client';
 
+export const revalidate = 0;
+
 export default function AsteroidProject() {
   return (
     <main className="bg-black text-white min-h-screen">
