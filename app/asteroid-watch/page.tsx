@@ -114,7 +114,7 @@ export default function AsteroidProject() {
 
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Threat Assessment Scatter Plot</h4>
-                <p className="text-gray-300 mb-4">Every asteroid plotted by size vs. distance. Bigger + closer = scarier. Red dots = close approach alerts. Yellow borders = potentially hazardous.</p>
+                <p className="text-gray-300 mb-4">Every asteroid plotted by size vs. distance. Bigger and closer = scarier. Click any dot to highlight it in the table below and open its detail panel.</p>
                 <div className="bg-slate-800 rounded-lg p-6">
                   <p className="text-gray-400 mb-4">[Screenshot: Scatter plot]</p>
                   <div className="bg-slate-700 h-64 rounded flex items-center justify-center">
@@ -158,7 +158,7 @@ export default function AsteroidProject() {
 
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Email Alerts</h4>
-                <p className="text-gray-300 mb-4">AI-written notifications with human-scale comparisons, links to the dashboard and NASA JPL.</p>
+                <p className="text-gray-300 mb-4">AI-written notifications with human-scale comparisons, linking directly to the dashboard, the alerted object in Foundry, and its NASA JPL page.</p>
                 <div className="bg-slate-800 rounded-lg p-6">
                   <p className="text-gray-400 mb-4">[Screenshot: Email notification]</p>
                   <div className="bg-slate-700 h-32 rounded flex items-center justify-center">
