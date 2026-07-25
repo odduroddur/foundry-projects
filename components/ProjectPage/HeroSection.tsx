@@ -26,7 +26,6 @@ export default function HeroSection({
         <p className="text-xl text-gray-300 mb-8 max-w-3xl">{tagline}</p>
 
         <div className="bg-slate-800 rounded-lg p-8">
-          <p className="text-gray-400 mb-4">See It In Action</p>
           {heroVideoPlaceholder.startsWith('http') ? (
             heroVideoPlaceholder.endsWith('.mp4') || heroVideoPlaceholder.endsWith('.webm') ? (
               <video
