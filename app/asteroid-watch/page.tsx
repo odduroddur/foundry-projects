@@ -28,21 +28,6 @@ export default function AsteroidProject() {
         </div>
       </section>
 
-      {/* TOOLS & TECHNOLOGIES */}
-      <section className="bg-slate-900 py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6">Tools & Technologies</h2>
-          <div className="bg-slate-800 rounded-lg p-6">
-            <p className="text-gray-300 leading-relaxed">
-              Python · TypeScript · React · Polars · REST APIs · Foundry Data Connection · Egress Policies · 
-              Ontology Object Types · Conditional Formatting · Incremental Pipelines · Foundry Schedules · 
-              Foundry Automate · TypeScript v2 Functions · OSDK React · Recharts · GPT-5.5 (LLM) · Developer 
-              Console · Global Branching · CSS Modules
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* WHAT & WHY */}
       <section className="bg-slate-900 py-16 px-4">
         <div className="max-w-6xl mx-auto">
