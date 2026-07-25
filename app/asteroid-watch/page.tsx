@@ -46,7 +46,7 @@ export default function AsteroidProject() {
         </div>
       </section>
 
-      {/* SECTION 1: WHAT & WHY */}
+      {/* WHAT & WHY */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12">Section 1: What & Why</h2>
@@ -82,7 +82,7 @@ export default function AsteroidProject() {
         </div>
       </section>
 
-      {/* SECTION 2: HOW IT WORKS */}
+      {/* HOW IT WORKS */}
       <section className="bg-slate-900 py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12">Section 2: How It Works</h2>
@@ -171,7 +171,7 @@ export default function AsteroidProject() {
         </div>
       </section>
 
-      {/* SECTION 3: UNDER THE HOOD */}
+      {/* UNDER THE HOOD */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12">Section 3: Under the Hood</h2>
