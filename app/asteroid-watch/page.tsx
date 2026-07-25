@@ -32,7 +32,7 @@ export default function AsteroidProject() {
       </section>
 
       {/* TOOLS & TECHNOLOGIES */}
-      <section className="py-16 px-4">
+      <section className="bg-slate-900 py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-6">Tools & Technologies</h2>
           <div className="bg-slate-800 rounded-lg p-6">
@@ -46,10 +46,10 @@ export default function AsteroidProject() {
         </div>
       </section>
 
-      {/* SECTION 1: WHAT & WHY */}
+      {/* WHAT & WHY */}
       <section className="bg-slate-900 py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12">Section 1: What & Why</h2>
+          <h2 className="text-4xl font-bold mb-12">What & Why</h2>
 
           <div className="mb-12">
             <h3 className="text-2xl font-bold mb-4 text-blue-400">The Problem</h3>
@@ -85,7 +85,7 @@ export default function AsteroidProject() {
       {/* HOW IT WORKS */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12">Section 2: How It Works</h2>
+          <h2 className="text-4xl font-bold mb-12">How It Works</h2>
 
           <div className="mb-12">
             <h3 className="text-2xl font-bold mb-6 text-blue-400">User Workflow - Daily Flow</h3>
@@ -174,7 +174,7 @@ export default function AsteroidProject() {
       {/* UNDER THE HOOD */}
       <section className="bg-slate-900 py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12">Section 3: Under the Hood</h2>
+          <h2 className="text-4xl font-bold mb-12">Under the Hood</h2>
 
           <div className="mb-12">
             <h3 className="text-2xl font-bold mb-6 text-blue-400">Architecture Diagram</h3>
