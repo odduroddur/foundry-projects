@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 
-export const revalidate = 0;
-
 function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
   return (
     <div 
