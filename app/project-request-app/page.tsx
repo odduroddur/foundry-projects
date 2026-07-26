@@ -1,4 +1,49 @@
+"use client";
+
+import { useState } from "react";
+
 export const revalidate = 0;
+
+function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
+  return (
+    <div 
+      className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 cursor-zoom-out"
+      onClick={onClose}
+    >
+      <button 
+        className="absolute top-4 right-4 text-white text-3xl hover:text-gray-300 transition"
+        onClick={onClose}
+      >
+        ✕
+      </button>
+      <img 
+        src={src} 
+        alt={alt} 
+        className="max-w-full max-h-[90vh] object-contain rounded"
+        onClick={(e) => e.stopPropagation()}
+      />
+    </div>
+  );
+}
+
+function ClickableImage({ src, alt, maxHeight = '500px' }: { src: string; alt: string; maxHeight?: string }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
+        <img 
+          src={src}
+          alt={alt}
+          className="max-w-full h-auto rounded object-contain cursor-zoom-in hover:opacity-90 transition"
+          style={{ maxHeight }}
+          onClick={() => setOpen(true)}
+        />
+      </div>
+      {open && <Lightbox src={src} alt={alt} onClose={() => setOpen(false)} />}
+    </>
+  );
+}
 
 export default function ProjectRequestApp() {
   return (
@@ -96,14 +141,10 @@ export default function ProjectRequestApp() {
               with current status (Pending, Fulfilled, or Rejected with reason), the groups they requested, 
               and the location — so they always know where their request stands without having to ask anyone.
             </p>
-            <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
-              <img 
-                src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/project-request-app/02%20User%20Front%20End.png"
-                alt="User request form with group picker and previous requests"
-                className="max-w-full h-auto rounded object-contain"
-                style={{ maxHeight: '500px' }}
-              />
-            </div>
+            <ClickableImage 
+              src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/project-request-app/02%20User%20Front%20End.png"
+              alt="User request form with group picker and previous requests"
+            />
           </div>
 
           <div className="mb-12">
@@ -116,14 +157,10 @@ export default function ProjectRequestApp() {
             <p className="text-gray-300 mb-4">
               Only members of the designated admin group can access this page — non-admins see nothing.
             </p>
-            <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
-              <img 
-                src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/project-request-app/03%20Admin%20Front%20End.png"
-                alt="Admin dashboard with pending requests and approve/reject buttons"
-                className="max-w-full h-auto rounded object-contain"
-                style={{ maxHeight: '500px' }}
-              />
-            </div>
+            <ClickableImage 
+              src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/project-request-app/03%20Admin%20Front%20End.png"
+              alt="Admin dashboard with pending requests and approve/reject buttons"
+            />
           </div>
 
           <div className="mb-12">
@@ -133,14 +170,10 @@ export default function ProjectRequestApp() {
               sidebar and ask natural language questions like &quot;How do I request a new project?&quot; or &quot;What&apos;s the 
               difference between Owner and Editor?&quot; — and get instant answers without leaving Foundry.
             </p>
-            <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
-              <img 
-                src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/project-request-app/04%20AIP%20Assist.png"
-                alt="AIP Assist answering a question about the app"
-                className="max-w-full h-auto rounded object-contain"
-                style={{ maxHeight: '500px' }}
-              />
-            </div>
+            <ClickableImage 
+              src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/project-request-app/04%20AIP%20Assist.png"
+              alt="AIP Assist answering a question about the app"
+            />
           </div>
         </div>
       </section>
@@ -152,13 +185,11 @@ export default function ProjectRequestApp() {
 
           <div className="mb-12">
             <h3 className="text-2xl font-bold mb-6 text-blue-400">Architecture Diagram</h3>
-            <div className="bg-slate-800 rounded-lg p-6 overflow-x-auto">
-              <img 
-                src="https://raw.githubusercontent.com/odduroddur/foundry-projects/f12396b09e845f53fba96400c1bace207416fced/app/project-request-app/05%20Architecture%20Diagram.svg"
-                alt="Architecture Diagram"
-                className="w-full rounded"
-              />
-            </div>
+            <ClickableImage 
+              src="https://raw.githubusercontent.com/odduroddur/foundry-projects/f12396b09e845f53fba96400c1bace207416fced/app/project-request-app/05%20Architecture%20Diagram.svg"
+              alt="Architecture Diagram"
+              maxHeight="600px"
+            />
           </div>
 
           <div className="mb-12">
@@ -222,3 +253,5 @@ export default function ProjectRequestApp() {
     </main>
   );
 }
+
+Click any image → it opens full-size in a dark overlay. Click the overlay or ✕ to close. The `cursor-zoom-in` on hover signals it's clickable.
