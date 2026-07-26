@@ -1,4 +1,47 @@
-export const revalidate = 0;
+"use client";
+
+import { useState } from "react";
+
+function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
+  return (
+    <div 
+      className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 cursor-zoom-out"
+      onClick={onClose}
+    >
+      <button 
+        className="absolute top-4 right-4 text-white text-3xl hover:text-gray-300 transition"
+        onClick={onClose}
+      >
+        ✕
+      </button>
+      <img 
+        src={src} 
+        alt={alt} 
+        className="max-w-full max-h-[90vh] object-contain rounded"
+        onClick={(e) => e.stopPropagation()}
+      />
+    </div>
+  );
+}
+
+function ClickableImage({ src, alt, maxHeight = '500px', fullWidth = false }: { src: string; alt: string; maxHeight?: string; fullWidth?: boolean }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
+        <img 
+          src={src}
+          alt={alt}
+          className={`${fullWidth ? 'w-full' : 'max-w-full h-auto'} rounded object-contain cursor-zoom-in hover:opacity-90 transition`}
+          style={fullWidth ? undefined : { maxHeight }}
+          onClick={() => setOpen(true)}
+        />
+      </div>
+      {open && <Lightbox src={src} alt={alt} onClose={() => setOpen(false)} />}
+    </>
+  );
+}
 
 export default function AsteroidProject() {
   const dailyFlow = '7:00 AM → System pulls next 7 days of asteroid data from NASA\n→ Enriches with orbital parameters + discovery info\n→ Checks for close approaches (< threshold)\n→ If new threat found → AI writes a briefing → Email sent';
@@ -8,7 +51,6 @@ export default function AsteroidProject() {
       {/* HERO SECTION */}
       <section className="bg-gradient-to-b from-slate-900 to-black py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          {/* BACK BUTTON */}
           <a href="/" className="inline-block mb-8 text-cyan-400 hover:text-cyan-300 transition">
             ← Back to Portfolio
           </a>
@@ -21,7 +63,6 @@ export default function AsteroidProject() {
             and sends AI-powered alerts when space rocks get too close for comfort.
           </p>
           
-          {/* HERO VIDEO */}
           <div className="bg-slate-800 rounded-lg p-8 overflow-hidden flex justify-center">
             <video 
               controls 
@@ -88,79 +129,55 @@ export default function AsteroidProject() {
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">7-Day Outlook (top)</h4>
                 <p className="text-gray-300 mb-4">AI-generated summary of the weeks incoming asteroids with color-coded keywords</p>
-                <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
-                  <img 
-                    src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/02%20Outlook.png"
-                    alt="7-Day Outlook banner"
-                    className="max-w-full h-auto rounded object-contain"
-                    style={{ maxHeight: '500px' }}
-                  />
-                </div>
+                <ClickableImage 
+                  src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/02%20Outlook.png"
+                  alt="7-Day Outlook banner"
+                />
               </div>
 
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Threat Assessment Scatter Plot</h4>
                 <p className="text-gray-300 mb-4">Every asteroid plotted by size vs. distance. Bigger and closer = scarier. Click any dot to highlight it in the table below and open its detail panel.</p>
-                <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
-                  <img 
-                    src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/03%20Scatter%20Plot.png"
-                    alt="Scatter plot"
-                    className="max-w-full h-auto rounded object-contain"
-                    style={{ maxHeight: '500px' }}
-                  />
-                </div>
+                <ClickableImage 
+                  src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/03%20Scatter%20Plot.png"
+                  alt="Scatter plot"
+                />
               </div>
 
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Asteroid Table</h4>
                 <p className="text-gray-300 mb-4">All incoming asteroids sorted by date. Click any row to open detail panel and the row flashes cyan.</p>
-                <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
-                  <img 
-                    src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/04%20Table.png"
-                    alt="Asteroid table with badges"
-                    className="max-w-full h-auto rounded object-contain"
-                    style={{ maxHeight: '500px' }}
-                  />
-                </div>
+                <ClickableImage 
+                  src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/04%20Table.png"
+                  alt="Asteroid table with badges"
+                />
               </div>
 
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Detail Panel</h4>
                 <p className="text-gray-300 mb-4">Full asteroid profile: AI threat analysis, orbital data, observation history, NASA JPL link.</p>
-                <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
-                  <img 
-                    src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/05%20Detail%20Panel.png"
-                    alt="Detail panel with AI analysis"
-                    className="max-w-full h-auto rounded object-contain"
-                    style={{ maxHeight: '500px' }}
-                  />
-                </div>
+                <ClickableImage 
+                  src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/05%20Detail%20Panel.png"
+                  alt="Detail panel with AI analysis"
+                />
               </div>
 
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Close Approach History</h4>
                 <p className="text-gray-300 mb-4">On-demand chart showing every Earth pass from 1900-2200, fetched live from NASA JPL API. No data stored — always fresh.</p>
-                <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
-                  <img 
-                    src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/06%20Close%20Approach%20History.png"
-                    alt="Close approach history chart"
-                    className="max-w-full h-auto rounded object-contain"
-                    style={{ maxHeight: '500px' }}
-                  />
-                </div>
+                <ClickableImage 
+                  src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/06%20Close%20Approach%20History.png"
+                  alt="Close approach history chart"
+                />
               </div>
 
               <div>
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Email Alerts</h4>
                 <p className="text-gray-300 mb-4">AI-written notifications with human-scale comparisons, linking directly to the dashboard, the alerted object in Foundry, and its NASA JPL page.</p>
-                <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
-                  <img 
-                    src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/07%20Email.png"
-                    alt="Email notification"
-                    className="max-w-full h-auto rounded object-contain"
-                    style={{ maxHeight: '500px' }}
-                  />
-                </div>
+                <ClickableImage 
+                  src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/07%20Email.png"
+                  alt="Email notification"
+                />
               </div>
             </div>
           </div>
@@ -174,13 +191,12 @@ export default function AsteroidProject() {
 
           <div className="mb-12">
             <h3 className="text-2xl font-bold mb-6 text-blue-400">Architecture Diagram</h3>
-            <div className="bg-slate-800 rounded-lg p-6 overflow-x-auto">
-              <img 
-                src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/08%20Architecture%20Diagram.svg"
-                alt="Architecture Diagram"
-                className="w-full rounded"
-              />
-            </div>
+            <ClickableImage 
+              src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/08%20Architecture%20Diagram.svg"
+              alt="Architecture Diagram"
+              maxHeight="600px"
+              fullWidth
+            />
           </div>
 
           <div className="mb-12">
