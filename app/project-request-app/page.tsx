@@ -253,5 +253,3 @@ export default function ProjectRequestApp() {
     </main>
   );
 }
-
-Click any image → it opens full-size in a dark overlay. Click the overlay or ✕ to close. The `cursor-zoom-in` on hover signals it's clickable.
