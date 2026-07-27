@@ -81,7 +81,7 @@ export default function SpotifyAnalysis() {
           <div className="mb-12">
             <h3 className="text-2xl font-bold mb-4 text-green-400">The Problem</h3>
             <p className="text-gray-300 leading-relaxed">
-              You listen to music every day, but there&apos;s no way readily available solution analyze your own habits. How has 
+              You listen to music every day, but there&apos;s no readily available solution to analyze your own habits. How has 
               your taste evolved over the past two years? What&apos;s your skip rate for a specific artist? Which 
               genres dominate your weekday mornings? What new artists should I listen to and why?
             </p>
