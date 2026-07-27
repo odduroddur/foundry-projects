@@ -10,7 +10,7 @@ const SAMPLE_PROJECTS = [
     title: 'Project Request App',
     category: 'Web App',
     description: 'A self-service workflow app where employees request Foundry projects, admins approve with one click, and projects are automatically created with the correct permissions assigned.',
-    image: '📋',
+    image: 'https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/components/03%20Project%20Request%20Hero.png',
     link: '/project-request-app',
   },
   {
