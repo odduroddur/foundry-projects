@@ -14,14 +14,19 @@ export default function Footer() {
           </div>
           <div className="text-center">
             <h3 className="text-xl font-bold mb-4">Contact</h3>
-            <p className="text-gray-300 mb-2">Email: oddur1506@gmail.com</p>
+            <a 
+              href="mailto:oddur1506@gmail.com" 
+              className="text-gray-300 hover:text-primary transition block mb-2"
+            >
+              Email
+            </a>
             <a 
               href="https://www.linkedin.com/in/oddur-m%C3%A1r-oddsson-90a1a1265/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-gray-300 hover:text-primary transition"
+              className="text-gray-300 hover:text-primary transition block"
             >
-              LinkedIn →
+              LinkedIn
             </a>
           </div>
         </div>
