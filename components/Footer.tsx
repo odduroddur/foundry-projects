@@ -4,15 +4,15 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-secondary text-white py-12">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex flex-col items-center text-center mb-8">
-          <div className="mb-8">
+        <div className="flex justify-center gap-16 mb-8">
+          <div className="text-center">
             <h3 className="text-xl font-bold mb-4">About</h3>
-            <p className="text-gray-300 max-w-md">
+            <p className="text-gray-300 max-w-sm">
               Foundry developer building end-to-end data platforms — from raw ingestion and pipeline 
               design to ontology modeling, AI-powered features, and interactive applications.
             </p>
           </div>
-          <div>
+          <div className="text-center">
             <h3 className="text-xl font-bold mb-4">Contact</h3>
             <p className="text-gray-300">Email: oddur1506@gmail.com</p>
           </div>
