@@ -8,9 +8,6 @@ export default function Hero() {
         <p className="text-xl text-gray-300 mb-8">
           End-to-end projects built on Palantir Foundry — from raw data to interactive AI-powered applications
         </p>
-        <a href="#projects" className="inline-block bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition">
-          Explore Projects
-        </a>
       </div>
     </section>
   );
