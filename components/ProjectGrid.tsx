@@ -7,27 +7,27 @@ import ProjectCard from './ProjectCard';
 const SAMPLE_PROJECTS = [
   {
     id: 1,
-    title: 'Spotify Analysis',
-    category: 'Data Analysis',
-    description: 'Built with Palantir Foundry - Comprehensive music consumption analytics and listener insights platform',
-    image: '🎵',
-    link: '/spotify-analysis',
+    title: 'Project Request App',
+    category: 'Web App',
+    description: 'A self-service workflow app where employees request Foundry projects, admins approve with one click, and projects are automatically created with the correct permissions assigned.',
+    image: '📋',
+    link: '/project-request-app',
   },
   {
     id: 2,
     title: 'Asteroid Watch',
     category: 'Space Tech',
-    description: 'Near-Earth Object Early Warning System - Real-time tracking and trajectory analysis powered by Palantir Foundry',
+    description: 'A real-time asteroid monitoring dashboard that pulls live data from NASA, detects close approaches, and sends AI-powered email alerts when space rocks get too close for comfort.',
     image: '☄️',
     link: '/asteroid-watch',
   },
   {
     id: 3,
-    title: 'Project Request App',
-    category: 'Web App',
-    description: 'Streamlined application for managing project requests with data integration via Palantir Foundry',
-    image: '📋',
-    link: '/project-request-app',
+    title: 'Spotify Analysis',
+    category: 'Data Analysis',
+    description: 'A full-stack analytics platform that transforms raw Spotify listening history into an interactive dashboard with AI-powered genre classification, smart recommendations, and a conversational chatbot.',
+    image: '🎵',
+    link: '/spotify-analysis',
   },
 ];
 
