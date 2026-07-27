@@ -42,6 +42,8 @@ export default function ProjectGrid() {
       : SAMPLE_PROJECTS.filter((p) => p.category === selectedCategory);
 
   return (
+    <section id="projects" className="py-16 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-center gap-3 mb-12 flex-wrap">
           {CATEGORIES.map((category) => (
             <button
