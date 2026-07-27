@@ -13,11 +13,17 @@ export default function ProjectCard({
   description,
   image,
 }: ProjectCardProps) {
+  const isUrl = image && image.startsWith('http');
+
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
       {image && (
-        <div className="w-full h-48 bg-gray-300 flex items-center justify-center">
-          <span className="text-gray-500">Image: {image}</span>
+        <div className="w-full h-48 bg-gray-300 flex items-center justify-center overflow-hidden">
+          {isUrl ? (
+            <img src={image} alt={title} className="w-full h-full object-cover" />
+          ) : (
+            <span className="text-6xl">{image}</span>
+          )}
         </div>
       )}
       <div className="p-6">
