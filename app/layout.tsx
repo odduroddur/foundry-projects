@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Foundry Projects Showcase",
-  description: "A collection of amazing foundry projects",
+  description: "A collection of foundry projects",
 };
 
 export default function RootLayout({
