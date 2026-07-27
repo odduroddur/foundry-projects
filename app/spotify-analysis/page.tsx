@@ -81,12 +81,12 @@ export default function SpotifyAnalysis() {
           <div className="mb-12">
             <h3 className="text-2xl font-bold mb-4 text-green-400">The Problem</h3>
             <p className="text-gray-300 leading-relaxed">
-              When you request your personal data from Spotify (a GDPR export), you get hundreds of thousands of 
-              rows of raw JSON — cryptic field names, no genre information, timestamps in milliseconds, and no way 
-              to explore patterns or ask questions about your own listening history. The data is technically yours, 
-              but it&apos;s practically unusable without building something yourself.
+              You listen to music every day, but there&apos;s no way readily available solution analyze your own habits. How has 
+              your taste evolved over the past two years? What&apos;s your skip rate for a specific artist? Which 
+              genres dominate your weekday mornings? What new artists should I listen to and why?
             </p>
           </div>
+
 
           <div className="mb-12">
             <h3 className="text-2xl font-bold mb-4 text-green-400">The Solution</h3>
@@ -106,7 +106,6 @@ export default function SpotifyAnalysis() {
             <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
               <li>Every stream I&apos;ve ever played — filterable, sortable, and visualized in seconds</li>
               <li>Genre insights that Spotify itself doesn&apos;t surface in its export data</li>
-              <li>A rediscovery engine that identifies artists you genuinely enjoyed (low skip rate) but haven&apos;t played in 10–90 days — surfacing forgotten favorites based on your actual behavior rather than a black-box recommendation algorithm</li>
               <li>Conversational access — ask &quot;What did I listen to most in March?&quot; and get an instant answer</li>
             </ul>
           </div>
