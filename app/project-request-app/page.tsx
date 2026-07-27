@@ -81,7 +81,7 @@ export default function ProjectRequestApp() {
           <div className="mb-12">
             <h3 className="text-2xl font-bold mb-4 text-blue-400">The Problem</h3>
             <p className="text-gray-300 leading-relaxed">
-              Creating a Foundry project is a multi-step manual process: an employee sends a Slack message or email 
+              Creating a Foundry project is a multi-step manual process: an employee sends a message or email 
               to an admin, the admin manually creates the project, then manually adds security groups to Owner/Editor/Viewer 
               roles. There&apos;s no audit trail, no standardization, and it&apos;s slow — especially at scale when dozens of teams 
               need projects weekly.
@@ -224,18 +224,13 @@ export default function ProjectRequestApp() {
                   </tr>
                   <tr className="border-b border-slate-800">
                     <td className="px-4 py-3">Backend Functions</td>
-                    <td className="px-4 py-3">TypeScript v2, External Sources</td>
+                    <td className="px-4 py-3">TypeScript v2, Rest API</td>
                     <td className="px-4 py-3">Project creation, group search, space listing via service token</td>
                   </tr>
                   <tr className="border-b border-slate-800">
-                    <td className="px-4 py-3">Access Control</td>
-                    <td className="px-4 py-3">Group membership + action permissions + row-level security</td>
-                    <td className="px-4 py-3">Multi-layered: UI, API, and data level</td>
-                  </tr>
-                  <tr className="border-b border-slate-800">
                     <td className="px-4 py-3">Security</td>
-                    <td className="px-4 py-3">Data Connection secrets, OAuth2 scopes, row-level filtering</td>
-                    <td className="px-4 py-3">PAT never exposed, users see only their own data</td>
+                    <td className="px-4 py-3">OAuth2, action permissions, row-level filtering, Data Connection secrets</td>
+                    <td className="px-4 py-3">Multi-layered: UI hides admin page, Foundry blocks unauthorized action execution, data layer restricts visibility to own requests</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-3">AI Documentation</td>
