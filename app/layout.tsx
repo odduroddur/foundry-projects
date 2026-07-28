@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Foundry Projects Showcase",
-  description: "A collection of foundry projects",
+  title: "Orthancfoundry — Palantir Foundry Projects",
+  description: "End-to-end projects built on Palantir Foundry, from raw data ingestion to interactive AI-powered applications.",
 };
 
 export default function RootLayout({
