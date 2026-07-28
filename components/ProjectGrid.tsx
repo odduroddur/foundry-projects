@@ -18,7 +18,7 @@ const SAMPLE_PROJECTS = [
     title: 'Asteroid Watch',
     category: 'Space Tech',
     description: 'A real-time asteroid monitoring dashboard that pulls live data from NASA, detects close approaches, and sends AI-powered email alerts when space rocks get too close for comfort.',
-    image: '☄️',
+    image: 'https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/components/02%20Asteroid%20Hero.png',
     link: '/asteroid-watch',
   },
   {
@@ -26,7 +26,7 @@ const SAMPLE_PROJECTS = [
     title: 'Spotify Analysis',
     category: 'Data Analysis',
     description: 'A full-stack analytics platform that transforms raw Spotify listening history into an interactive dashboard with AI-powered genre classification, smart recommendations, and a conversational chatbot.',
-    image: '🎵',
+    image: 'https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/components/01%20Spotify%20Hero.png',
     link: '/spotify-analysis',
   },
 ];
