@@ -16,9 +16,9 @@ export default function ProjectCard({
   const isUrl = image && image.startsWith('http');
 
   return (
-    <div className="border border-gray-200 rounded-md overflow-hidden hover:border-primary transition">
+    <div className="border border-gray-200 rounded-md overflow-hidden shadow-sm hover:shadow-md transition">
       {image && (
-        <div className="w-full h-48 bg-gray-100 flex items-center justify-center overflow-hidden">
+        <div className="w-full h-56 bg-gray-100 flex items-center justify-center overflow-hidden">
           {isUrl ? (
             <img src={image} alt={title} className="w-full h-full object-cover" />
           ) : (
