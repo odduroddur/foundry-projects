@@ -42,17 +42,17 @@ export default function ProjectGrid() {
       : SAMPLE_PROJECTS.filter((p) => p.category === selectedCategory);
 
   return (
-    <section id="projects" className="py-16 bg-gray-50">
+    <section id="projects" className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-center gap-3 mb-12 flex-wrap">
+        <div className="flex justify-center gap-2 mb-12 flex-wrap">
           {CATEGORIES.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full font-semibold transition ${
+              className={`px-4 py-1.5 rounded text-sm font-medium transition ${
                 selectedCategory === category
-                  ? 'bg-primary text-white'
-                  : 'bg-white text-secondary border border-gray-300 hover:bg-gray-100'
+                  ? 'bg-secondary text-white'
+                  : 'text-gray-500 hover:text-secondary'
               }`}
             >
               {category}
