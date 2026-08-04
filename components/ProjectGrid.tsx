@@ -52,7 +52,7 @@ export default function ProjectGrid() {
               className={`px-4 py-1.5 rounded text-sm font-medium transition ${
                 selectedCategory === category
                   ? 'bg-secondary text-white'
-                  : 'text-gray-500 hover:text-secondary'
+                  : 'text-gray-400 hover:text-secondary'
               }`}
             >
               {category}
