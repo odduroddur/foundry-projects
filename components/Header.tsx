@@ -2,7 +2,7 @@
 
 export default function Header() {
   return (
-    <header className="bg-surface border-b border-gray-200 py-5">
+    <header className="bg-surface border-b border-gray-200 py-7">
       <div className="max-w-6xl mx-auto px-4 flex justify-between items-center">
         <a href="/" className="flex items-center gap-2 hover:opacity-80 transition">
           <img 
