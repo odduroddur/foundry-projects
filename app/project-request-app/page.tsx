@@ -29,7 +29,7 @@ function ClickableImage({ src, alt, maxHeight = '500px' }: { src: string; alt: s
 
   return (
     <>
-      <div className="bg-slate-800 rounded-lg p-6 overflow-hidden flex justify-center">
+      <div className="bg-surface rounded-md p-6 overflow-hidden flex justify-center">
         <img 
           src={src}
           alt={alt}
@@ -45,24 +45,24 @@ function ClickableImage({ src, alt, maxHeight = '500px' }: { src: string; alt: s
 
 export default function ProjectRequestApp() {
   return (
-    <main className="bg-black text-white min-h-screen">
+    <main className="min-h-screen">
       {/* HERO SECTION */}
-      <section className="bg-gradient-to-b from-slate-900 to-black py-20 px-4">
+      <section className="py-16 px-4 border-b border-gray-200">
         <div className="max-w-6xl mx-auto">
-          <a href="/" className="inline-block mb-8 text-cyan-400 hover:text-cyan-300 transition">
-            ← Back to Portfolio
+          <a href="/" className="inline-block mb-8 text-gray-400 hover:text-primary transition text-sm">
+            ← Back to Projects
           </a>
 
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
-            📁 Project Request App — Self-Service Project Creation for Foundry
+          <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
+            Project Request App — Self-Service Project Creation for Foundry
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
+          <p className="text-gray-700 mb-8 max-w-3xl">
             A full-stack workflow application that lets employees request new Foundry projects through a clean form, 
             admins review and approve with one click, and the project is automatically created with the correct 
             security groups assigned — no manual work, full audit trail.
           </p>
 
-          <div className="bg-slate-800 rounded-lg p-8 overflow-hidden flex justify-center">
+          <div className="bg-surface rounded-md p-6 overflow-hidden flex justify-center">
             <video 
               controls 
               className="max-w-full h-auto rounded"
@@ -74,13 +74,13 @@ export default function ProjectRequestApp() {
       </section>
 
       {/* WHAT & WHY */}
-      <section className="bg-slate-900 py-16 px-4">
+      <section className="py-16 px-4 border-b border-gray-200">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12">What & Why</h2>
+          <h2 className="text-3xl font-bold text-secondary mb-12">What & Why</h2>
 
           <div className="mb-12">
-            <h3 className="text-2xl font-bold mb-4 text-blue-400">The Problem</h3>
-            <p className="text-gray-300 leading-relaxed">
+            <h3 className="text-xl font-bold mb-4 text-primary">The Problem</h3>
+            <p className="text-gray-700 leading-relaxed">
               Creating a Foundry project is a multi-step manual process: an employee sends a message or email 
               to an admin, the admin manually creates the project, then manually adds security groups to Owner/Editor/Viewer 
               roles. There&apos;s no audit trail, no standardization, and it&apos;s slow — especially at scale when dozens of teams 
@@ -89,9 +89,9 @@ export default function ProjectRequestApp() {
           </div>
 
           <div className="mb-12">
-            <h3 className="text-2xl font-bold mb-4 text-blue-400">The Solution</h3>
-            <p className="text-gray-300 mb-4">A self-service web application with two interfaces:</p>
-            <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
+            <h3 className="text-xl font-bold mb-4 text-primary">The Solution</h3>
+            <p className="text-gray-700 mb-4">A self-service web application with two interfaces:</p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
               <li>Employee view — A simple Google Forms-style interface where users name their project, pick a location, and search for security groups to assign to each role</li>
               <li>Admin view — A dashboard showing all pending requests with full details, the ability to edit before approving, and one-click approve/reject</li>
               <li>Automatic fulfillment — Upon approval, the project is created via the Foundry API with the correct groups assigned. No manual steps.</li>
@@ -99,8 +99,8 @@ export default function ProjectRequestApp() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-blue-400">The Impact</h3>
-            <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
+            <h3 className="text-xl font-bold mb-4 text-primary">The Impact</h3>
+            <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
               <li>Zero manual project creation — admin clicks Approve and the project exists with correct permissions</li>
               <li>Full audit trail — who requested what, who approved, and when</li>
               <li>Standardized process — every project follows the same creation workflow and permission model</li>
@@ -111,14 +111,14 @@ export default function ProjectRequestApp() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 border-b border-gray-200">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12">How It Works</h2>
+          <h2 className="text-3xl font-bold text-secondary mb-12">How It Works</h2>
 
           <div className="mb-12">
-            <h3 className="text-2xl font-bold mb-6 text-blue-400">User Workflow</h3>
-            <div className="bg-slate-800 rounded-lg p-6">
-              <pre className="text-gray-300 whitespace-pre-wrap font-mono text-sm">
+            <h3 className="text-xl font-bold mb-6 text-primary">User Workflow</h3>
+            <div className="bg-surface rounded-md p-6">
+              <pre className="text-gray-600 whitespace-pre-wrap font-mono text-sm">
 {`Employee opens app → Fills form (name, location, groups) → Submits
 → Request stored as "Pending"
 → Admin sees it in dashboard → Reviews → Clicks Approve
@@ -128,13 +128,13 @@ export default function ProjectRequestApp() {
           </div>
 
           <div className="mb-12">
-            <h3 className="text-2xl font-bold mb-6 text-blue-400">The Request Form</h3>
-            <p className="text-gray-300 mb-4">
+            <h3 className="text-xl font-bold mb-6 text-primary">The Request Form</h3>
+            <p className="text-gray-700 mb-4">
               Simple, clean interface. Users search for security groups by name with a typeahead dropdown. 
               Multiple groups can be assigned to each role (Owner, Editor, Viewer). Location is selected 
               from a dropdown of available Foundry Spaces.
             </p>
-            <p className="text-gray-300 mb-4">
+            <p className="text-gray-700 mb-4">
               Below the form, users see a &quot;My Previous Requests&quot; section showing all their past submissions 
               with current status (Pending, Fulfilled, or Rejected with reason), the groups they requested, 
               and the location — so they always know where their request stands without having to ask anyone.
@@ -146,13 +146,13 @@ export default function ProjectRequestApp() {
           </div>
 
           <div className="mb-12">
-            <h3 className="text-2xl font-bold mb-6 text-blue-400">The Admin Dashboard</h3>
-            <p className="text-gray-300 mb-4">
+            <h3 className="text-xl font-bold mb-6 text-primary">The Admin Dashboard</h3>
+            <p className="text-gray-700 mb-4">
               Shows all pending requests with project name, requester, date, location, and assigned groups 
               visible at a glance. Admins can approve immediately or click Edit to modify groups/location 
               before approving. A rejection reason is required when rejecting.
             </p>
-            <p className="text-gray-300 mb-4">
+            <p className="text-gray-700 mb-4">
               Only members of the designated admin group can access this page — non-admins see nothing.
             </p>
             <ClickableImage 
@@ -162,8 +162,8 @@ export default function ProjectRequestApp() {
           </div>
 
           <div className="mb-12">
-            <h3 className="text-2xl font-bold mb-6 text-blue-400">Built-in AI Help</h3>
-            <p className="text-gray-300 mb-4">
+            <h3 className="text-xl font-bold mb-6 text-primary">Built-in AI Help</h3>
+            <p className="text-gray-700 mb-4">
               The app&apos;s documentation is connected to Foundry&apos;s AIP Assist, meaning any user can open the AI 
               sidebar and ask natural language questions like &quot;How do I request a new project?&quot; or &quot;What&apos;s the 
               difference between Owner and Editor?&quot; — and get instant answers without leaving Foundry.
@@ -177,12 +177,12 @@ export default function ProjectRequestApp() {
       </section>
 
       {/* UNDER THE HOOD */}
-      <section className="bg-slate-900 py-16 px-4">
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12">Under the Hood</h2>
+          <h2 className="text-3xl font-bold text-secondary mb-12">Under the Hood</h2>
 
           <div className="mb-12">
-            <h3 className="text-2xl font-bold mb-6 text-blue-400">Architecture Diagram</h3>
+            <h3 className="text-xl font-bold mb-6 text-primary">Architecture Diagram</h3>
             <ClickableImage 
               src="https://raw.githubusercontent.com/odduroddur/foundry-projects/f12396b09e845f53fba96400c1bace207416fced/app/project-request-app/05%20Architecture%20Diagram.svg"
               alt="Architecture Diagram"
@@ -191,43 +191,43 @@ export default function ProjectRequestApp() {
           </div>
 
           <div className="mb-12">
-            <h3 className="text-2xl font-bold mb-6 text-blue-400">Technology Stack</h3>
+            <h3 className="text-xl font-bold mb-6 text-primary">Technology Stack</h3>
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-gray-300">
+              <table className="w-full text-left">
                 <thead>
-                  <tr className="border-b border-slate-700">
-                    <th className="px-4 py-2 font-semibold text-cyan-400">Layer</th>
-                    <th className="px-4 py-2 font-semibold text-cyan-400">Technology</th>
-                    <th className="px-4 py-2 font-semibold text-cyan-400">Purpose</th>
+                  <tr className="border-b border-gray-200">
+                    <th className="px-4 py-2 font-semibold text-secondary">Layer</th>
+                    <th className="px-4 py-2 font-semibold text-secondary">Technology</th>
+                    <th className="px-4 py-2 font-semibold text-secondary">Purpose</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr className="border-b border-slate-800">
+                <tbody className="text-gray-600">
+                  <tr className="border-b border-gray-100">
                     <td className="px-4 py-3">Frontend</td>
                     <td className="px-4 py-3">React, TypeScript, CSS Modules</td>
                     <td className="px-4 py-3">Google Forms-style request form + admin dashboard</td>
                   </tr>
-                  <tr className="border-b border-slate-800">
+                  <tr className="border-b border-gray-100">
                     <td className="px-4 py-3">Authentication</td>
                     <td className="px-4 py-3">OAuth2 via @osdk/oauth</td>
                     <td className="px-4 py-3">Secure user login with scoped API access</td>
                   </tr>
-                  <tr className="border-b border-slate-800">
+                  <tr className="border-b border-gray-100">
                     <td className="px-4 py-3">Semantic Layer</td>
                     <td className="px-4 py-3">Foundry Ontology</td>
                     <td className="px-4 py-3">ProjectRequest object type with edit-backed storage</td>
                   </tr>
-                  <tr className="border-b border-slate-800">
+                  <tr className="border-b border-gray-100">
                     <td className="px-4 py-3">Workflow</td>
                     <td className="px-4 py-3">Foundry Action Types</td>
                     <td className="px-4 py-3">Submit, Approve, Reject, Fulfill — with validation rules</td>
                   </tr>
-                  <tr className="border-b border-slate-800">
+                  <tr className="border-b border-gray-100">
                     <td className="px-4 py-3">Backend Functions</td>
                     <td className="px-4 py-3">TypeScript v2, Rest API</td>
                     <td className="px-4 py-3">Project creation, group search, space listing via service token</td>
                   </tr>
-                  <tr className="border-b border-slate-800">
+                  <tr className="border-b border-gray-100">
                     <td className="px-4 py-3">Security</td>
                     <td className="px-4 py-3">OAuth2, action permissions, row-level filtering, Data Connection secrets</td>
                     <td className="px-4 py-3">Multi-layered: UI hides admin page, Foundry blocks unauthorized action execution, data layer restricts visibility to own requests</td>
