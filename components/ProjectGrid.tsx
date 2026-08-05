@@ -42,17 +42,22 @@ export default function ProjectGrid() {
       : SAMPLE_PROJECTS.filter((p) => p.category === selectedCategory);
 
   return (
-    <section id="projects" className="py-16 bg-gray-50">
+    <section id="projects" className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-center gap-3 mb-12 flex-wrap">
+        <h2 className="text-4xl font-bold text-secondary text-center mb-2">Palantir Foundry Projects</h2>
+        <p className="text-sm text-gray-400 text-center mb-12">
+          End-to-end projects — from raw data to interactive AI-powered applications
+        </p>
+
+        <div className="flex justify-center gap-2 mb-12 flex-wrap">
           {CATEGORIES.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full font-semibold transition ${
+              className={`px-4 py-1.5 rounded text-sm font-medium transition ${
                 selectedCategory === category
-                  ? 'bg-primary text-white'
-                  : 'bg-white text-secondary border border-gray-300 hover:bg-gray-100'
+                  ? 'bg-secondary text-white'
+                  : 'text-gray-400 hover:text-secondary'
               }`}
             >
               {category}

@@ -16,9 +16,9 @@ export default function ProjectCard({
   const isUrl = image && image.startsWith('http');
 
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
+    <div className="bg-surface rounded-md overflow-hidden shadow-sm hover:shadow-md transition">
       {image && (
-        <div className="w-full h-48 bg-gray-300 flex items-center justify-center overflow-hidden">
+        <div className="w-full h-56 bg-surface flex items-center justify-center overflow-hidden">
           {isUrl ? (
             <img src={image} alt={title} className="w-full h-full object-cover" />
           ) : (
@@ -26,15 +26,12 @@ export default function ProjectCard({
           )}
         </div>
       )}
-      <div className="p-6">
-        <span className="inline-block bg-primary text-white text-sm px-3 py-1 rounded-full mb-2">
+      <div className="p-5">
+        <span className="text-xs font-medium text-gray-400 uppercase tracking-wide">
           {category}
         </span>
-        <h3 className="text-xl font-bold text-secondary mb-2">{title}</h3>
-        <p className="text-gray-600">{description}</p>
-        <button className="mt-4 text-primary font-semibold hover:underline">
-          Learn More →
-        </button>
+        <h3 className="text-lg font-semibold text-secondary mt-1 mb-2">{title}</h3>
+        <p className="text-sm text-gray-500 leading-relaxed">{description}</p>
       </div>
     </div>
   );
