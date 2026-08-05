@@ -2,7 +2,7 @@
 
 export default function Header() {
   return (
-    <header className="bg-gray-200 border-b border-gray-300 py-5">
+    <header className="bg-gray-100 border-b border-gray-200 py-5">
       <div className="max-w-6xl mx-auto px-4 flex justify-between items-center">
         <span className="text-sm font-semibold text-secondary tracking-wide">orthancfoundry.dev</span>
         <nav>
