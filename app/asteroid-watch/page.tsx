@@ -51,14 +51,14 @@ export default function AsteroidProject() {
       {/* HERO SECTION */}
       <section className="bg-gray-50 py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <a href="/" className="inline-block mb-8 text-primary hover:text-primary/80 transition text-sm">
+          <a href="/" className="inline-block mb-8 text-gray-400 hover:text-primary transition text-sm">
             ← Back to Projects
           </a>
 
           <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
             ☄️ Asteroid Watch — Near-Earth Object Early Warning System
           </h1>
-          <p className="text-gray-500 mb-8 max-w-3xl">
+          <p className="text-gray-700 mb-8 max-w-3xl">
             A real-time asteroid monitoring dashboard that pulls live data from NASA, detects close approaches, 
             and sends AI-powered alerts when space rocks get too close for comfort.
           </p>
@@ -81,7 +81,7 @@ export default function AsteroidProject() {
 
           <div className="mb-12">
             <h3 className="text-xl font-bold mb-4 text-primary">The Problem</h3>
-            <p className="text-gray-500 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed">
               NASA tracks over 61,000 near-Earth asteroids, with new close approaches predicted daily. The raw data 
               is scattered across multiple NASA APIs, returned as deeply nested JSON, and lacks any alerting mechanism. 
               If something noteworthy is heading our way, you need to check manually.
@@ -90,8 +90,8 @@ export default function AsteroidProject() {
 
           <div className="mb-12">
             <h3 className="text-xl font-bold mb-4 text-primary">The Solution</h3>
-            <p className="text-gray-500 mb-4">An end-to-end early warning system that:</p>
-            <ul className="list-disc list-inside space-y-2 text-gray-500 ml-4">
+            <p className="text-gray-700 mb-4">An end-to-end early warning system that:</p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
               <li>Pulls asteroid data daily from 3 NASA APIs and enriches it into a clean, queryable dataset</li>
               <li>Detects threats automatically using configurable distance thresholds with deduplicated alerting</li>
               <li>Delivers AI-powered briefings — a GPT-5.5-generated 7-Day Outlook and per-asteroid threat analysis</li>
@@ -101,7 +101,7 @@ export default function AsteroidProject() {
 
           <div>
             <h3 className="text-xl font-bold mb-4 text-primary">The Impact</h3>
-            <ul className="list-disc list-inside space-y-2 text-gray-500 ml-4">
+            <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
               <li>Zero manual monitoring — the system checks NASA every morning and emails you only when noteworthy</li>
               <li>Sub-second insights — from raw API data to interactive dashboard with AI analysis</li>
               <li>300 years of history on-demand — click any asteroid to see every past and future Earth pass from 1900-2200</li>
@@ -128,7 +128,7 @@ export default function AsteroidProject() {
             <div className="space-y-8">
               <div>
                 <h4 className="text-base font-semibold text-secondary mb-3">7-Day Outlook</h4>
-                <p className="text-gray-500 mb-4">AI-generated summary of the weeks incoming asteroids with color-coded keywords</p>
+                <p className="text-gray-700 mb-4">AI-generated summary of the weeks incoming asteroids with color-coded keywords</p>
                 <ClickableImage 
                   src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/02%20Outlook.png"
                   alt="7-Day Outlook banner"
@@ -137,7 +137,7 @@ export default function AsteroidProject() {
 
               <div>
                 <h4 className="text-base font-semibold text-secondary mb-3">Threat Assessment Scatter Plot</h4>
-                <p className="text-gray-500 mb-4">Every asteroid plotted by size vs. distance. Bigger and closer = scarier. Click any dot to highlight it in the table below and open its detail panel.</p>
+                <p className="text-gray-700 mb-4">Every asteroid plotted by size vs. distance. Bigger and closer = scarier. Click any dot to highlight it in the table below and open its detail panel.</p>
                 <ClickableImage 
                   src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/03%20Scatter%20Plot.png"
                   alt="Scatter plot"
@@ -146,7 +146,7 @@ export default function AsteroidProject() {
 
               <div>
                 <h4 className="text-base font-semibold text-secondary mb-3">Asteroid Table</h4>
-                <p className="text-gray-500 mb-4">All incoming asteroids sorted by date. Click any row to open detail panel and the row flashes cyan.</p>
+                <p className="text-gray-700 mb-4">All incoming asteroids sorted by date. Click any row to open detail panel and the row flashes cyan.</p>
                 <ClickableImage 
                   src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/04%20Table.png"
                   alt="Asteroid table with badges"
@@ -155,7 +155,7 @@ export default function AsteroidProject() {
 
               <div>
                 <h4 className="text-base font-semibold text-secondary mb-3">Detail Panel</h4>
-                <p className="text-gray-500 mb-4">Full asteroid profile: AI threat analysis, orbital data, observation history, NASA JPL link.</p>
+                <p className="text-gray-700 mb-4">Full asteroid profile: AI threat analysis, orbital data, observation history, NASA JPL link.</p>
                 <ClickableImage 
                   src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/05%20Detail%20Panel.png"
                   alt="Detail panel with AI analysis"
@@ -164,7 +164,7 @@ export default function AsteroidProject() {
 
               <div>
                 <h4 className="text-base font-semibold text-secondary mb-3">Close Approach History</h4>
-                <p className="text-gray-500 mb-4">On-demand chart showing every Earth pass from 1900-2200, fetched live from NASA JPL API. No data stored — always fresh.</p>
+                <p className="text-gray-700 mb-4">On-demand chart showing every Earth pass from 1900-2200, fetched live from NASA JPL API. No data stored — always fresh.</p>
                 <ClickableImage 
                   src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/06%20Close%20Approach%20History.png"
                   alt="Close approach history chart"
@@ -173,7 +173,7 @@ export default function AsteroidProject() {
 
               <div>
                 <h4 className="text-base font-semibold text-secondary mb-3">Email Alerts</h4>
-                <p className="text-gray-500 mb-4">AI-written notifications with human-scale comparisons, linking directly to the dashboard, the alerted object in Foundry, and its NASA JPL page.</p>
+                <p className="text-gray-700 mb-4">AI-written notifications with human-scale comparisons, linking directly to the dashboard, the alerted object in Foundry, and its NASA JPL page.</p>
                 <ClickableImage 
                   src="https://raw.githubusercontent.com/odduroddur/foundry-projects/6596f5ea184a42fd680fd59c692cb789dde44c24/app/asteroid-watch/07%20Email.png"
                   alt="Email notification"
@@ -209,7 +209,7 @@ export default function AsteroidProject() {
           <div className="mb-12">
             <h3 className="text-xl font-bold mb-6 text-primary">Technology Stack</h3>
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-gray-500">
+              <table className="w-full text-left">
                 <thead>
                   <tr className="border-b border-gray-200">
                     <th className="px-4 py-2 font-semibold text-secondary">Layer</th>
@@ -217,7 +217,7 @@ export default function AsteroidProject() {
                     <th className="px-4 py-2 font-semibold text-secondary">Purpose</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className="text-gray-600">
                   <tr className="border-b border-gray-100">
                     <td className="px-4 py-3">Data Ingestion</td>
                     <td className="px-4 py-3">Python (Polars), Lightweight Transforms</td>
@@ -283,14 +283,14 @@ export default function AsteroidProject() {
             <div className="space-y-6">
               <div>
                 <h4 className="text-base font-semibold text-secondary mb-2">1. On-demand history vs. stored history</h4>
-                <p className="text-gray-500">
+                <p className="text-gray-700">
                   Rather than storing every asteroids full close approach history (which would grow endlessly), 
                   the app fetches it live from NASAs CAD API when you click an asteroid. Zero storage cost, always current data.
                 </p>
               </div>
               <div>
                 <h4 className="text-base font-semibold text-secondary mb-2">2. Incremental deduplication with expiry</h4>
-                <p className="text-gray-500">
+                <p className="text-gray-700">
                   The main dataset rebuilds daily (SNAPSHOT), but the alerts dataset is incremental (append-only). 
                   Alerts are deduplicated within an 8-day window — the same asteroid wont trigger repeated notifications 
                   during a single approach, but can re-trigger if it returns months later.
@@ -298,7 +298,7 @@ export default function AsteroidProject() {
               </div>
               <div>
                 <h4 className="text-base font-semibold text-secondary mb-2">3. Server-side Functions as API proxy</h4>
-                <p className="text-gray-500">
+                <p className="text-gray-700">
                   The React app runs in a Foundry dev environment with restrictive Content Security Policy, 
                   blocking direct external API calls. A TypeScript Function handles the NASA API calls server-side, 
                   returning structured data through OSDK — no CSP issues.
