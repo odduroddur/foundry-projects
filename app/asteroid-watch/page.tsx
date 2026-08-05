@@ -29,7 +29,7 @@ function ClickableImage({ src, alt, maxHeight = '500px', fullWidth = false }: { 
 
   return (
     <>
-      <div className="bg-gray-100 rounded-md p-6 overflow-hidden flex justify-center">
+      <div className="bg-surface rounded-md p-6 overflow-hidden flex justify-center">
         <img 
           src={src}
           alt={alt}
@@ -49,7 +49,7 @@ export default function AsteroidProject() {
   return (
     <main className="min-h-screen">
       {/* HERO SECTION */}
-      <section className="bg-gray-50 py-16 px-4">
+      <section className="bg-surface py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <a href="/" className="inline-block mb-8 text-gray-400 hover:text-primary transition text-sm">
             ← Back to Projects
@@ -63,7 +63,7 @@ export default function AsteroidProject() {
             and sends AI-powered alerts when space rocks get too close for comfort.
           </p>
           
-          <div className="bg-gray-100 rounded-md p-6 overflow-hidden flex justify-center">
+          <div className="bg-surface rounded-md p-6 overflow-hidden flex justify-center">
             <video 
               controls 
               className="max-w-full h-auto rounded"
@@ -111,13 +111,13 @@ export default function AsteroidProject() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="bg-gray-50 py-16 px-4">
+      <section className="bg-surface py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-secondary mb-12">How It Works</h2>
 
           <div className="mb-12">
             <h3 className="text-xl font-bold mb-6 text-primary">Daily Flow</h3>
-            <div className="bg-gray-100 rounded-md p-6">
+            <div className="bg-white rounded-md p-6">
               <pre className="text-gray-600 whitespace-pre-wrap font-mono text-sm">{dailyFlow}</pre>
             </div>
           </div>
@@ -201,7 +201,7 @@ export default function AsteroidProject() {
 
           <div className="mb-12">
             <h3 className="text-xl font-bold mb-6 text-primary">Daily Schedule</h3>
-            <div className="bg-gray-100 rounded-md p-6">
+            <div className="bg-surface rounded-md p-6">
               <pre className="text-gray-600 whitespace-pre-wrap font-mono text-sm">{dailyFlow}</pre>
             </div>
           </div>
@@ -311,3 +311,5 @@ export default function AsteroidProject() {
     </main>
   );
 }
+
+All `bg-gray-50` and `bg-gray-100` swapped to `bg-surface`. The code blocks inside `bg-surface` sections now use `bg-white` for contrast. Send me the next one!
