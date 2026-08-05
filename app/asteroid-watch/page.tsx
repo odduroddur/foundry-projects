@@ -56,7 +56,7 @@ export default function AsteroidProject() {
           </a>
 
           <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
-            ☄️ Asteroid Watch — Near-Earth Object Early Warning System
+            Asteroid Watch — Near-Earth Object Early Warning System
           </h1>
           <p className="text-gray-700 mb-8 max-w-3xl">
             A real-time asteroid monitoring dashboard that pulls live data from NASA, detects close approaches, 
