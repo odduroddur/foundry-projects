@@ -49,7 +49,7 @@ export default function AsteroidProject() {
   return (
     <main className="min-h-screen">
       {/* HERO SECTION */}
-      <section className="bg-surface py-16 px-4">
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <a href="/" className="inline-block mb-8 text-gray-400 hover:text-primary transition text-sm">
             ← Back to Projects
@@ -111,13 +111,13 @@ export default function AsteroidProject() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="bg-surface py-16 px-4">
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-secondary mb-12">How It Works</h2>
 
           <div className="mb-12">
             <h3 className="text-xl font-bold mb-6 text-primary">Daily Flow</h3>
-            <div className="bg-white rounded-md p-6">
+            <div className="bg-surface rounded-md p-6">
               <pre className="text-gray-600 whitespace-pre-wrap font-mono text-sm">{dailyFlow}</pre>
             </div>
           </div>
