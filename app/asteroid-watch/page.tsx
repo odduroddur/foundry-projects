@@ -311,5 +311,3 @@ export default function AsteroidProject() {
     </main>
   );
 }
-
-All `bg-gray-50` and `bg-gray-100` swapped to `bg-surface`. The code blocks inside `bg-surface` sections now use `bg-white` for contrast. Send me the next one!
