@@ -8,7 +8,7 @@ export default function Header() {
           <img 
             src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/makeover/components/Foundry%20Logo.png" 
             alt="Foundry" 
-            className="h-8 w-auto object-contain" 
+            className="h-6 w-auto object-contain" 
           />
           <span className="font-[family-name:var(--font-brutal)] text-xs tracking-wide text-secondary">
             orthancfoundry
