@@ -54,7 +54,7 @@ export default function SpotifyAnalysis() {
           </a>
 
           <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
-            🎧 Beyond the Algorithm — Personal Spotify Listening Intelligence
+            Beyond the Algorithm — Personal Spotify Listening Intelligence
           </h1>
           <p className="text-gray-700 mb-8 max-w-3xl">
             A full-stack data platform that transforms raw Spotify export data into an interactive analytics 
