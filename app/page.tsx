@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <Hero />
+      {/* <Hero /> */}
       <ProjectGrid />
       <Footer />
     </main>
