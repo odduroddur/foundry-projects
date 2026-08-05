@@ -6,9 +6,9 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 flex justify-between items-center">
         <a href="/" className="flex items-center gap-2 hover:opacity-80 transition">
           <img 
-            src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/makeover/components/Foundry%20Logo.png" 
+            src="https://raw.githubusercontent.com/odduroddur/foundry-projects/3f2efa8e108e2c570fc608ab95dcde40b2ec3074/components/Foundry%20Logo.svg" 
             alt="Foundry" 
-            className="h-6 w-auto object-contain" 
+            className="h-5 w-auto" 
           />
           <span className="font-[family-name:var(--font-brutal)] text-xs tracking-wide text-secondary">
             orthancfoundry
