@@ -1,6 +1,14 @@
 'use client';
 
+import { useMemo } from 'react';
+
 export default function Footer() {
+  const email = useMemo(() => {
+    const user = 'oddur1506';
+    const domain = 'gmail.com';
+    return `${user}@${domain}`;
+  }, []);
+
   return (
     <footer id="contact" className="bg-secondary text-white py-12">
       <div className="max-w-6xl mx-auto px-4">
@@ -14,7 +22,9 @@ export default function Footer() {
           </div>
           <div className="text-center">
             <h3 className="text-sm font-medium text-gray-300 mb-3">Contact</h3>
-            <p className="text-sm text-gray-500 mb-1">oddur1506@gmail.com</p>
+            <a href={`mailto:${email}`} className="text-sm text-gray-500 hover:text-primary transition block mb-1">
+              {email}
+            </a>
             <a 
               href="https://www.linkedin.com/in/oddur-m%C3%A1r-oddsson-90a1a1265/" 
               target="_blank" 
