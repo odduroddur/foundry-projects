@@ -31,7 +31,7 @@ export default function ProjectCard({
           {category}
         </span>
         <h3 className="text-lg font-semibold text-secondary mt-1 mb-2">{title}</h3>
-        <p className="text-sm text-gray-500 leading-relaxed">{description}</p>
+        <p className="text-sm text-gray-700 leading-relaxed">{description}</p>
       </div>
     </div>
   );
