@@ -45,7 +45,7 @@ export default function ProjectGrid() {
     <section id="projects" className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-secondary text-center mb-2">Palantir Foundry Projects</h2>
-        <p className="text-sm text-gray-400 text-center mb-12">
+        <p className="text-sm text-gray-700 text-center mb-12">
           End-to-end projects — from raw data to interactive AI-powered applications
         </p>
 
