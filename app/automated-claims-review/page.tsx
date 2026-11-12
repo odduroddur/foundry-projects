@@ -287,7 +287,6 @@ export default function AutomatedClaimsReview() {
             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
               <li>The AI reformatted a table while quoting it, so the quote didn&apos;t match the contract. Quotes are now copied from the contract by code</li>
               <li>The mold case could be declined despite the unknown cause. The AI must now list missing facts, and any missing fact sends the claim to an adjuster</li>
-              <li>A routine dental claim was flagged because the AI&apos;s exception handling was incomplete. The fix was stricter AI output, not a weaker safeguard</li>
             </ul>
           </div>
 
