@@ -1,38 +1,86 @@
 'use client';
 
-interface ProjectCardProps {
-  title: string;
-  category: string;
-  description: string;
-  image?: string;
-}
+import { useState } from 'react';
+import Link from 'next/link';
+import ProjectCard from './ProjectCard';
 
-export default function ProjectCard({
-  title,
-  category,
-  description,
-  image,
-}: ProjectCardProps) {
-  const isUrl = image && image.startsWith('http');
+const SAMPLE_PROJECTS = [
+  {
+    id: 1,
+    title: 'Project Request App',
+    category: 'Web App',
+    description: 'A self-service workflow app where employees request Foundry projects, admins approve with one click, and projects are automatically created with the correct permissions assigned.',
+    image: 'https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/components/03%20Project%20Request%20Hero.png',
+    link: '/project-request-app',
+  },
+  {
+    id: 2,
+    title: 'Asteroid Watch',
+    category: 'Space Tech',
+    description: 'A real-time asteroid monitoring dashboard that pulls live data from NASA, detects close approaches, and sends AI-powered email alerts when space rocks get too close for comfort.',
+    image: 'https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/components/02%20Asteroid%20Hero.png',
+    link: '/asteroid-watch',
+  },
+  {
+    id: 3,
+    title: 'Spotify Analysis',
+    category: 'Data Analysis',
+    description: 'A full-stack analytics platform that transforms raw Spotify listening history into an interactive dashboard with AI-powered genre classification, smart recommendations, and a conversational chatbot.',
+    image: 'https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/components/01%20Spotify%20Hero.png',
+    link: '/spotify-analysis',
+  },
+  {
+    id: 4,
+    title: 'Automated Claims Review',
+    category: 'AI Automation',
+    description: 'An AI-powered claims app where policyholders get an instant covered / not-covered decision backed by exact quotes from their own policy contract, while adjusters handle only the unclear or disputed cases.',
+    image: 'https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/components/04%20Automated%20Claims%20Review%20Hero.png',
+    link: '/automated-claims-review',
+  },
+];
+
+const CATEGORIES = ['All', ...new Set(SAMPLE_PROJECTS.map((p) => p.category))];
+
+export default function ProjectGrid() {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  const filteredProjects =
+    selectedCategory === 'All'
+      ? SAMPLE_PROJECTS
+      : SAMPLE_PROJECTS.filter((p) => p.category === selectedCategory);
 
   return (
-    <div className="bg-surface rounded-md overflow-hidden shadow-sm hover:shadow-md transition">
-      {image && (
-        <div className="w-full h-56 bg-surface flex items-center justify-center overflow-hidden">
-          {isUrl ? (
-            <img src={image} alt={title} className="w-full h-full object-cover" />
-          ) : (
-            <span className="text-6xl">{image}</span>
-          )}
+    <section id="projects" className="py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-4xl font-bold text-secondary text-center mb-2">Palantir Foundry Projects</h2>
+        <p className="text-sm text-gray-700 text-center mb-12">
+          End-to-end projects — from raw data to interactive AI-powered applications
+        </p>
+
+        <div className="flex justify-center gap-2 mb-12 flex-wrap">
+          {CATEGORIES.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-4 py-1.5 rounded text-sm font-medium transition ${
+                selectedCategory === category
+                  ? 'bg-secondary text-white'
+                  : 'text-gray-400 hover:text-secondary'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
         </div>
-      )}
-      <div className="p-5">
-        <span className="text-xs font-medium text-gray-400 uppercase tracking-wide">
-          {category}
-        </span>
-        <h3 className="text-lg font-semibold text-secondary mt-1 mb-2">{title}</h3>
-        <p className="text-sm text-gray-700 leading-relaxed">{description}</p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProjects.map((project) => (
+            <Link key={project.id} href={project.link}>
+              <ProjectCard {...project} />
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
