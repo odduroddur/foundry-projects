@@ -6,6 +6,14 @@ import ProjectCard from './ProjectCard';
 
 const SAMPLE_PROJECTS = [
   {
+    id: 4,
+    title: 'Automated Claims Review',
+    category: 'AI Automation',
+    description: 'An AI-powered claims app where policyholders get an instant covered / not-covered decision backed by exact quotes from their own policy contract, while adjusters handle only the unclear or disputed cases.',
+    image: 'https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/components/04%20Automated%20Claims%20Review%20Hero.png',
+    link: '/automated-claims-review',
+  },
+  {
     id: 1,
     title: 'Project Request App',
     category: 'Web App',
