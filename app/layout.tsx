@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 const pressStart = Press_Start_2P({ weight: "400", subsets: ["latin"], variable: "--font-brutal" });
 
 export const metadata: Metadata = {
-  title: "orthancfoundry",
+  title: "Orthanc Foundry",
   description: "Palantir Foundry Projects",
 };
 
