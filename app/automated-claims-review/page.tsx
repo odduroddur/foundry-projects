@@ -71,7 +71,7 @@ export default function AutomatedClaimsReview() {
               controls 
               className="max-w-full h-auto rounded"
               style={{ maxHeight: '500px' }}
-              src="https://github.com/odduroddur/foundry-projects/raw/refs/heads/main/app/automated-claims-review/01%20App%20Video.mp4"
+              src="https://github.com/odduroddur/foundry-projects/raw/refs/heads/main/app/automated-claims-review/01%20Claims%20Video.mp4"
             />
           </div>
         </div>
@@ -137,7 +137,7 @@ export default function AutomatedClaimsReview() {
                   Choose a policy and coverage, enter the incident date, and describe what happened in your own words.
                 </p>
                 <ClickableImage 
-                  src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/automated-claims-review/02%20Claimant%20Claim%20Form.png"
+                  src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/automated-claims-review/02%20Claimant%20Portal%20Claim%20Form.png"
                   alt="Claimant portal claim form with policy, coverage, incident date and description"
                 />
               </div>
@@ -150,7 +150,7 @@ export default function AutomatedClaimsReview() {
                   write a short reason and the claim goes to an adjuster.
                 </p>
                 <ClickableImage 
-                  src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/automated-claims-review/03%20Claimant%20Decision%20With%20Quotes.png"
+                  src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/automated-claims-review/03%20Claimant%20Portal%20AI%20Decision.png"
                   alt="AI-decided claim showing the explanation, quotes from the policy contract and the Ask for review option"
                 />
               </div>
@@ -166,7 +166,7 @@ export default function AutomatedClaimsReview() {
                   Only the claims that need a person: the ones the AI flagged and the ones a claimant disputed.
                 </p>
                 <ClickableImage 
-                  src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/automated-claims-review/04%20Adjuster%20Queue.png"
+                  src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/automated-claims-review/04%20Claims%20Review%20Queue.png"
                   alt="Adjuster review queue with disputed claims flagged"
                 />
               </div>
@@ -179,7 +179,7 @@ export default function AutomatedClaimsReview() {
                   with a short reason, which the claimant sees.
                 </p>
                 <ClickableImage 
-                  src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/automated-claims-review/05%20Adjuster%20Review%20Detail.png"
+                  src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/automated-claims-review/05%20Claims%20Review%20Detail.png"
                   alt="Adjuster review detail with the claimant's description, AI assessment, contract quotes and decision form"
                   maxHeight="700px"
                 />
@@ -223,8 +223,10 @@ export default function AutomatedClaimsReview() {
               Section, and Policy → Claim → Claimant → Claim Citation, with Employee for the adjuster.
             </p>
             <ClickableImage 
-              src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/automated-claims-review/07%20Ontology%20Graph.png"
+              src="https://raw.githubusercontent.com/odduroddur/foundry-projects/refs/heads/main/app/automated-claims-review/07%20Ontology%20Graph.svg"
               alt="Ontology graph of the insurance object types and their links"
+              maxHeight="600px"
+              fullWidth
             />
           </div>
 
